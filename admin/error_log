@@ -1,0 +1,11 @@
+[08-Aug-2019 06:54:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/amszaami/public_html/admin/sign-in.php:4) in /home1/amszaami/public_html/admin/sign-in.php on line 60
+[08-Aug-2019 06:56:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/amszaami/public_html/admin/sign-in.php:4) in /home1/amszaami/public_html/admin/sign-in.php on line 60
+[08-Aug-2019 06:57:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/amszaami/public_html/admin/sign-in.php:4) in /home1/amszaami/public_html/admin/sign-in.php on line 60
+[08-Aug-2019 07:01:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/amszaami/public_html/admin/sign-in.php:4) in /home1/amszaami/public_html/admin/sign-in.php on line 60
+[08-Aug-2019 07:04:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/amszaami/public_html/admin/sign-in.php:5) in /home1/amszaami/public_html/admin/sign-in.php on line 61
+[05-Sep-2019 19:05:28 UTC] PHP Parse error:  syntax error, unexpected ''card_category'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_edit.php on line 203
+[12-Sep-2019 11:10:01 UTC] PHP Parse error:  syntax error, unexpected '$str_arr' (T_VARIABLE), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_detail.php on line 196
+[12-Sep-2019 11:11:52 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_detail.php on line 196
+[12-Sep-2019 11:12:13 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_detail.php on line 196
+[12-Sep-2019 11:12:16 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_detail.php on line 196
+[12-Sep-2019 11:12:36 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home1/amszaami/public_html/admin/customer_detail.php on line 196

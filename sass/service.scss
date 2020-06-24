@@ -1,0 +1,37 @@
+.service {
+  h1 {
+    font-size: 70px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $heading-color;
+    margin: 0;
+    color: #111111;
+    font-weight: 400;
+    font-family: "Cairo", sans-serif;
+  }
+  p {
+    color: $para-color;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  ul {
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    li {
+      list-style: disc;
+      font-size: 16px;
+      color: $para-color;
+      margin-bottom: 7px;
+    }
+  }
+
+  article{
+      margin: 2rem 0;
+  }
+}

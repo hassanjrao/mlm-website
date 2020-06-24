@@ -1,0 +1,15 @@
+{
+  "name": "php-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/style.scss css/style6.css -w",
+    "compile:slick":"node-sass slick/slick-theme.scss slick/slick-theme3.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

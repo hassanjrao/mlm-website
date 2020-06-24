@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^mlm-in-([a-zA-Z-.]+)  mlm-service.php?city=$1 [NC,L]
