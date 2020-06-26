@@ -82,6 +82,9 @@
                                     <input type="text" class="form-control" placeholder="Subject" name="subject" required=""><br>
                                     <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
 
+                                    <br>
+                                    <div class="g-recaptcha" data-sitekey="6Ldl5qkZAAAAAEG_OJFTYpKHKEYkxpYsKOhSYqIS"></div>
+                                    <br>
                                     <div class="modal-footer">
                                         <button type="submit" style="background: #7fad39; color:white;" class="btn">Submit</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

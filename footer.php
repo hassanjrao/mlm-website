@@ -284,7 +284,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                 </div>
 
-                <div class="col-lg-3 my-auto border border-top-0 border-left-0 border-bottom-0">
+                <div class="col-lg-2 mt-4 ">
                     <div class="footer__widget">
                         <ul class="text-center">
                             <li><a href="#">Blog Links 1</a></li>
@@ -304,21 +304,25 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 
 
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
                                 <!--<img src="img/logo.png" alt="">--></a>
                         </div>
-                        <form action="" method="POST">
+                        <form action="" method="POST" id="captcha-form">
                             <input type="text" class="form-control" placeholder="Name" name="name" required="">
                             <input type="email" class="form-control" placeholder="Email" name="email" required="">
                             <input type="number" class="form-control" placeholder="Mobile" name="mobile" required="">
                             <input type="text" class="form-control" placeholder="City" name="city" required="">
                             <input type="text" class="form-control" placeholder="Subject" name="subject" required="">
                             <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
-                            
-                            <div class="g-recaptcha" data-sitekey="6LcUiKkZAAAAACVahedaOMHHMqx6-IFyFKi7Z7W9"></div>
+
+                            <br> <br>
+
+
+
+                            <div class="g-recaptcha" data-sitekey="6Ldl5qkZAAAAAEG_OJFTYpKHKEYkxpYsKOhSYqIS"></div>
 
                             <br>
                             <button type="submit" class="btn ">Submit</button>
@@ -352,3 +356,9 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 
 <!-- Footer Section End -->
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("captcha-form").submit();
+    }
+</script>
