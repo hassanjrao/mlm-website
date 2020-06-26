@@ -3,20 +3,36 @@
 -----------------------*/
 .footer {
   background: $primary-color;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 0;
 }
 
 .footer__about {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
-  ul {
+  form {
 
-    li {
+    background: #248B06;
+    padding: 1.5rem;
+    border-radius: 10px;
+    input {
+      width: 100%;
       font-size: 16px;
+      padding-left: 20px;
+      margin-bottom: 1rem;
+      height: 30px;
+    }
+    textarea{
+      height: 54.5px;
+    }
+
+    button{
+      background: $black-color;
       color: $white-color;
-      line-height: 36px;
-      list-style: none;
+
+      &:hover{
+        color: $background-2;
+      }
     }
   }
 }
@@ -30,7 +46,7 @@
 }
 
 .footer__widget {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   overflow: hidden;
 
   h6 {
@@ -49,7 +65,7 @@
       a {
         color: $white-color;
         font-size: 14px;
-        line-height: 32px;
+        line-height: 22px;
       }
     }
   }
@@ -60,34 +76,7 @@
     margin-bottom: 30px;
   }
 
-  form {
-    position: relative;
-    margin-bottom: 30px;
-
-    input {
-      width: 100%;
-      font-size: 16px;
-      padding-left: 20px;
-      color: $normal-color;
-      height: 46px;
-      border: 1px solid #ededed;
-
-      &::placeholder {
-        color: $normal-color;
-      }
-    }
-
-    button {
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 0 26px;
-      height: 100%;
-    }
-  }
-
   .footer__widget__social {
-
     a {
       display: inline-block;
       height: 41px;
@@ -99,7 +88,7 @@
       line-height: 38px;
       text-align: center;
       background: $white-color;
-      @include transition(all, .3s);
+      @include transition(all, 0.3s);
       margin-right: 10px;
 
       &:last-child {

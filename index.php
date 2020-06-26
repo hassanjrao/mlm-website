@@ -17,6 +17,7 @@ session_start();
 
         <meta name="description" content="home">
         <meta name="keywords" content="mlm">
+
         <title>Home</title>
 
         <?php include("head-links.php"); ?>
@@ -76,7 +77,7 @@ session_start();
                                 <h5><a href="#"><?php echo ucwords($result['caption']);  ?></a></h5>
                             </div>
                         </div>
-                        
+
                     <?php } ?>
 
 
@@ -192,6 +193,7 @@ session_start();
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/main.js"></script>
 
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('.slider23').slick({
@@ -253,8 +255,12 @@ session_start();
                     adjustCookie();
                 });
             });
+
+
         });
     </script>
+
+
 
 
 

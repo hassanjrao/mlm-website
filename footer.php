@@ -1,21 +1,35 @@
 <?php
 include("database/db.php");
 
+
+
+
+
+
+
+$query1 = $conn->prepare("SELECT * FROM footer_on_off_tb");
+$query1->execute();
+$result1 = $query1->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 
-
 <!-- Footer Section Begin -->
-
-
-<button type="button" class="btn btn-info float-right mt-1 mr-1" data-toggle="collapse" data-target="#bottom"><i class="fas fa-plus-circle"></i></button>
-
 
 <footer class="footer spad">
 
 
+
+
     <div class="container">
 
-        <div id="bottom" class="collapse show">
+
+
+        <?php
+        if ($result1["switch"] == "ON") {
+
+        ?>
+
             <div class="row">
 
 
@@ -27,17 +41,20 @@ include("database/db.php");
                         $ind = 0;
                         $cts = array();
                         $ids = array();
+                        $z = 0;
+                        $done_cities = array();
+                        $done_ids = array();
 
                         $query = $conn->prepare("SELECT * FROM cities_tb");
                         $query->execute();
 
                         while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
-                            $cts[$ind] = $result["city"];
+                            $cities[$ind] = $result["city"];
                             $ids[$ind] = $result["id"];
                             $ind++;
                         }
 
-                        $cities = array_unique($cts);
+
 
                         $totalCities = count($cities);
 
@@ -61,17 +78,21 @@ include("database/db.php");
                                         $id = $ids[$i];
 
 
-                                        $done_cities[$x] = $city;
-                                        $done_ids[$x] = $id;
+                                        $done_cities[$z] = $city;
+                                        $done_ids[$z] = $id;
+                                        $z++;
 
 
                                         $ct = preg_replace('/\s+/', '-', $city);
-                                        $_SESSION["$ct"] = $id;
+                                        $_SESSION[$ct] = $id;
                                     ?>
                                         <li class="ml-2"><a target="_blank" href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
                                     <?php
                                     }
+
+                                    // var_dump($done_cities);
+                                    // var_dump($done_ids);
 
                                     ?>
 
@@ -108,18 +129,22 @@ include("database/db.php");
                                         $i = $n[$x];
 
                                         $city = $leftCities[$i];
-                                        $done_cities[$x] = $city;
+                                        $done_cities[$z] = $city;
 
                                         $id = $leftIds[$i];
-                                        $done_ids[$x] = $id;
+                                        $done_ids[$z] = $id;
+
+                                        $z++;
 
 
                                     ?>
 
-                                        <li class="ml-3"><a href="#"><?php echo ucwords($city) ?></a></li>
+                                        <li class="ml-2"><a href="#"><?php echo ucwords($city) ?></a></li>
 
 
                                     <?php }
+                                    // var_dump($done_cities);
+                                    // var_dump($done_ids);
                                     ?>
 
                                 </ul>
@@ -135,7 +160,7 @@ include("database/db.php");
                         <div class="col-lg-6 border border-top-0 border-left-0 border-bottom-0">
                             <div class="footer__widget">
 
-                                <p class="mb-1 mt-4">Mlm companies: </p>
+                                <p class="mb-1 mt-4">Mlm companies in: </p>
                                 <ul>
 
                                     <?php
@@ -157,13 +182,13 @@ include("database/db.php");
                                         $i = $n[$x];
 
                                         $city = $leftCities[$i];
-                                        $done_cities[$x] = $city;
+                                        $done_cities[$z] = $city;
 
 
                                         $id = $leftIds[$i];
-                                        $done_ids[$x] = $id;
+                                        $done_ids[$z] = $id;
 
-
+                                        $z++;
 
 
                                         $ct = preg_replace('/\s+/', '-', $city);
@@ -172,6 +197,8 @@ include("database/db.php");
                                         <li class="ml-2"><a target="_blank" href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                     <?php }
+                                    //  var_dump($done_cities);
+                                    //  var_dump($done_ids);
                                     ?>
 
                                 </ul>
@@ -183,7 +210,7 @@ include("database/db.php");
 
                             <div class="footer__widget">
 
-                                <p class="mb-1 mt-4">Multi level marketing: </p>
+                                <p class="mb-1 mt-4">Multi level marketing in: </p>
                                 <ul>
 
                                     <?php
@@ -205,12 +232,45 @@ include("database/db.php");
                                         $i = $n[$x];
 
                                         $city = $leftCities[$i];
+                                        $done_cities[$z] = $city;
+
+
+                                        $id = $leftIds[$i];
+                                        $done_ids[$z] = $id;
+
+                                        $z++;
+
+
 
                                     ?>
-                                        <li class="ml-3"><a href="#"><?php echo ucwords($city) ?></a></li>
+                                        <li class="ml-2"><a href="#"><?php echo ucwords($city) ?></a></li>
 
 
                                     <?php }
+
+                                    $left = array_diff($cities, $done_cities);
+
+                                    $leftCities = array_values($left);
+
+                                    $l_ids = array_diff($ids, $done_ids);
+                                    $leftIds = array_values($l_ids);
+
+
+                                    $totalLeftCities = count($leftCities);
+
+                                    for ($x = 0; $x < $totalLeftCities; $x++) {
+
+                                        $city = $leftCities[$x];
+
+
+                                        $id = $leftIds[$x];
+
+
+                                        $ct = preg_replace('/\s+/', '-', $city);
+                                        $_SESSION["$ct"] = $id;
+                                    }
+
+
                                     ?>
 
                                 </ul>
@@ -244,23 +304,35 @@ include("database/db.php");
 
 
 
-                <div class="col-lg-3 my-auto ">
+                <div class="col-lg-3">
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
                                 <!--<img src="img/logo.png" alt="">--></a>
                         </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 Pakistan</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: someone@mail.com</li>
-                        </ul>
+                        <form action="" method="POST">
+                            <input type="text" class="form-control" placeholder="Name" name="name" required="">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required="">
+                            <input type="number" class="form-control" placeholder="Mobile" name="mobile" required="">
+                            <input type="text" class="form-control" placeholder="City" name="city" required="">
+                            <input type="text" class="form-control" placeholder="Subject" name="subject" required="">
+                            <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
+                            
+                            <div class="g-recaptcha" data-sitekey="6LcUiKkZAAAAACVahedaOMHHMqx6-IFyFKi7Z7W9"></div>
+
+                            <br>
+                            <button type="submit" class="btn ">Submit</button>
+
+                        </form>
                     </div>
+
+
                 </div>
-
             </div>
-        </div>
 
+        <?php
+        }
+        ?>
 
         <div class="row">
             <div class="col-lg-12">

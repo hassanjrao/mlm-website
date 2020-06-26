@@ -11,6 +11,6 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="slick/slick-theme3.css" />
-<link rel="stylesheet" href="css/style6.css" type="text/css">
+<link rel="stylesheet" href="css/style9.css" type="text/css">
 <link rel="stylesheet" href="css/toggle.css" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">

@@ -44,6 +44,12 @@
                 </ul>
             </li>
 
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Footer</span></a>
+                <ul class="ml-menu">
+                    <li><a href="footer_on_off.php">ON/OFF</a></li>
+                </ul>
+            </li>
+
 
     </div>
 

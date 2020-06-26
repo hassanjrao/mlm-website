@@ -1919,16 +1919,28 @@ ol {
 -----------------------*/
 .footer {
   background: #7fad39;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 0; }
 
 .footer__about {
-  margin-bottom: 30px; }
-  .footer__about ul li {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 36px;
-    list-style: none; }
+  margin-bottom: 20px; }
+  .footer__about form {
+    background: #248B06;
+    padding: 1.5rem;
+    border-radius: 10px; }
+    .footer__about form input {
+      width: 100%;
+      font-size: 16px;
+      padding-left: 20px;
+      margin-bottom: 1rem;
+      height: 30px; }
+    .footer__about form textarea {
+      height: 54.5px; }
+    .footer__about form button {
+      background: #000000;
+      color: #ffffff; }
+      .footer__about form button:hover {
+        color: #f2f2f2; }
 
 .footer__about__logo {
   margin-bottom: 15px; }
@@ -1936,7 +1948,7 @@ ol {
     display: inline-block; }
 
 .footer__widget {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   overflow: hidden; }
   .footer__widget h6 {
     color: #1c1c1c;
@@ -1949,29 +1961,11 @@ ol {
       .footer__widget ul li a {
         color: #ffffff;
         font-size: 14px;
-        line-height: 32px; }
+        line-height: 22px; }
   .footer__widget p {
     font-size: 14px;
     color: #ffffff;
     margin-bottom: 30px; }
-  .footer__widget form {
-    position: relative;
-    margin-bottom: 30px; }
-    .footer__widget form input {
-      width: 100%;
-      font-size: 16px;
-      padding-left: 20px;
-      color: #1c1c1c;
-      height: 46px;
-      border: 1px solid #ededed; }
-      .footer__widget form input::placeholder {
-        color: #1c1c1c; }
-    .footer__widget form button {
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 0 26px;
-      height: 100%; }
   .footer__widget .footer__widget__social a {
     display: inline-block;
     height: 41px;
@@ -2568,7 +2562,7 @@ ol {
     font-size: 24px; } }
 
 .service h1 {
-  font-size: 70px; }
+  font-size: 55px; }
 
 .service h1,
 .service h2,
@@ -2582,8 +2576,8 @@ ol {
 
 .service p {
   color: #6f6f6f;
-  font-size: 18px;
-  line-height: 30px; }
+  font-size: 16.5px;
+  line-height: 23px; }
 
 .service ul {
   padding-left: 50px;
@@ -2597,3 +2591,16 @@ ol {
 
 .service article {
   margin: 2rem 0; }
+
+.slider {
+  padding-left: 5rem;
+  padding-right: 5rem; }
+  .slider .enquiry-btn {
+    position: absolute;
+    top: 14%;
+    left: 88.8%;
+    transform: translate(-50%, -50%);
+    font-size: xx-small;
+    font-weight: bold;
+    background: #7fad39;
+    color: white; }

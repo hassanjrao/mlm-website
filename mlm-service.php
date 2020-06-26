@@ -63,7 +63,7 @@ $url=$result["url"];
     <!-- Left Menu + Slider End -->
 
 
-    <main class="pt-5">
+    <main class="pt-2">
         <div class="service">
             <div class="container">
                 <div class="row">
