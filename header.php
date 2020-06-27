@@ -39,10 +39,10 @@
     </nav>
     <div id="mobile-menu-wrap"></div>
     <div class="header__top__right__social">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
     </div>
     <div class="humberger__menu__contact">
         <ul>

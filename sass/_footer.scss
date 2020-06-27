@@ -3,36 +3,41 @@
 -----------------------*/
 .footer {
   background: $primary-color;
-  padding-top: 50px;
-  padding-bottom: 0;
+  padding-top: 18px;
+  p {
+    font-size: 14px;
+    color: $white-color;
+  }
 }
 
 .footer__about {
   margin-bottom: 20px;
 
   form {
-
-    background: #248B06;
+    background: #248b06;
     padding: 1.5rem;
     border-radius: 10px;
+    width: 97%;
     input {
       width: 100%;
       font-size: 16px;
       padding-left: 20px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       height: 30px;
     }
-    textarea{
+    textarea {
       height: 54.5px;
+      width: 100%;
+      font-size: 16px;
+      padding-left: 20px;
+      margin-bottom: 0.5rem;
     }
 
-    
-
-    button{
+    button {
       background: $black-color;
       color: $white-color;
 
-      &:hover{
+      &:hover {
         color: $background-2;
       }
     }
@@ -58,9 +63,6 @@
   }
 
   ul {
-    // width: 50%;
-    float: left;
-
     li {
       list-style: none;
 
@@ -73,44 +75,16 @@
   }
 
   p {
-    font-size: 14px;
-    color: $white-color;
     margin-bottom: 30px;
-  }
-
-  .footer__widget__social {
-    a {
-      display: inline-block;
-      height: 41px;
-      width: 41px;
-      font-size: 16px;
-      color: #404040;
-      border: 1px solid #ededed;
-      border-radius: 50%;
-      line-height: 38px;
-      text-align: center;
-      background: $white-color;
-      @include transition(all, 0.3s);
-      margin-right: 10px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        background: $primary-color;
-        color: $white-color;
-        border-color: $white-color;
-      }
-    }
   }
 }
 
 .footer__copyright {
   border-top: 1px solid $border;
-  padding: 15px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow: hidden;
-  margin-top: 20px;
+
 }
 
 .footer__copyright__text {
@@ -120,6 +94,36 @@
   line-height: 25px;
 }
 
-.footer__copyright__payment {
+.footer__widget__social {
   float: right;
+  a {
+    display: inline-block;
+    height: 41px;
+    width: 41px;
+    font-size: 16px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    background: $white-color;
+    @include transition(all, 0.3s);
+    margin-right: 10px;
+
+    i{
+      color: #248b06;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: $primary-color;
+      color: $white-color;
+      border-color: $white-color;
+      i{
+        color:$white-color;
+      }
+    }
+  }
 }

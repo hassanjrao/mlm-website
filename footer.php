@@ -16,7 +16,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 <!-- Footer Section Begin -->
 
-<footer class="footer spad">
+<footer class="footer">
 
 
 
@@ -33,7 +33,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
             <div class="row">
 
 
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 my-auto">
 
                     <div class="row">
 
@@ -284,9 +284,9 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                 </div>
 
-                <div class="col-lg-2 mt-4 ">
+                <div class="col-lg-2 mt-4 my-auto">
                     <div class="footer__widget">
-                        <ul class="text-center">
+                        <ul>
                             <li><a href="#">Blog Links 1</a></li>
                             <li><a href="#">Blog Links 2</a></li>
                             <li><a href="#">Blog Links 3</a></li>
@@ -304,7 +304,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 my-auto">
                     <div class="footer__about">
                         <div class="footer__about__logo">
                             <a href="./index.html" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
@@ -318,14 +318,12 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                             <input type="text" class="form-control" placeholder="Subject" name="subject" required="">
                             <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
 
-                            <br> <br>
-
 
 
                             <div class="g-recaptcha" data-sitekey="6Ldl5qkZAAAAAEG_OJFTYpKHKEYkxpYsKOhSYqIS"></div>
 
                             <br>
-                            <button type="submit" class="btn ">Submit</button>
+                            <button type="submit" class="btn mt-1">Submit</button>
 
                         </form>
                     </div>
@@ -341,13 +339,17 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
         <div class="row">
             <div class="col-lg-12">
                 <div class="footer__copyright">
-                    <div class="footer__copyright__text">
-                        <p>
-                            Footer
-                        </p>
+                    <div class="footer__copyright__text my-auto">
+
+                        <p>Copyright ©<?php echo date("Y"); ?> All rights reserved</p>
+
                     </div>
-                    <div class="footer__copyright__payment">
-                        <!--<img src="img/payment-item.png" alt="">-->Something here</div>
+                    <div class="footer__widget__social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -210,7 +210,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
 
 
 
@@ -219,22 +219,3 @@
 
 </html>
 
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.slider23').slick({
-            slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            speed: 1000,
-            adaptiveHeight: true,
-            fade: true,
-            easing: 'ease-in-out',
-            dots: true,
-            arrows: true,
-            prevArrow: '<span class="slider-navigation-arrow slider-navigation-prev"><i class="ion ion-ios-arrow-back"></i></span>',
-            nextArrow: '<span class="slider-navigation-arrow slider-navigation-next"><i class="ion ion-ios-arrow-forward"></i></span>',
-
-        });
-    });
-</script>

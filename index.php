@@ -111,28 +111,25 @@ session_start();
         <div class=" container">
             <h3 class="text-center mb-4">Expandable FAQ:</h3>
 
-
-
-
-            <div class="accordion_head" data-node="#1">1. Eligibility:<div class="plusminus"><img src="img/accordian/plus.png" /></div>
+            <div class="accordion_head" data-node="#1">1. Eligibility:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
                 <p>The members eligible for Insurance benefit are the present and future cardholders of the Participant who have fulfilled all the requirements set out by the Participant for subscribing under its discount card membership scheme and are within the Eligibility Age range defined in the Participant's Specific Schedule.</p>
             </div>
 
-            <div class="accordion_head" data-node="#1">2. Lorem ipsum:<div class="plusminus"><img src="img/accordian/plus.png" /></div>
+            <div class="accordion_head" data-node="#1">2. Lorem ipsum:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
                 <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Member��s coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
             </div>
 
-            <div class="accordion_head" data-node="#1">3. Courses:<div class="plusminus"><img src="img/accordian/plus.png" /></div>
+            <div class="accordion_head" data-node="#1">3. Courses:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
                 <p>The members eligible for Insurance benefit are the present and future cardholders of the Participant who have fulfilled all the requirements set out by the Participant for subscribing under its discount card membership scheme and are within the Eligibility Age range defined in the Participant's Specific Schedule.</p>
             </div>
 
-            <div class="accordion_head" data-node="#1">4. Software Engineering:<div class="plusminus"><img src="img/accordian/plus.png" /></div>
+            <div class="accordion_head" data-node="#1">4. Software Engineering:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
                 <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Member��s coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
@@ -191,77 +188,10 @@ session_start();
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
 
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.slider23').slick({
-                slidesToShow: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                speed: 1000,
-                adaptiveHeight: true,
-                fade: true,
-                easing: 'ease-in-out',
-                dots: true,
-                arrows: true,
-                prevArrow: '<span class="slider-navigation-arrow slider-navigation-prev"><i class="ion ion-ios-arrow-back"></i></span>',
-                nextArrow: '<span class="slider-navigation-arrow slider-navigation-next"><i class="ion ion-ios-arrow-forward"></i></span>',
-
-            });
-
-
-            $(document).ready(function() {
-                if (document.cookie.indexOf('collapsed_Nodes') >= 0) {
-                    var getCollapsed = Cookies.get('collapsed_Nodes');
-                    var checkCollapsed = getCollapsed.split('|');
-                    var arrayLength = checkCollapsed.length;
-                    for (var i = 0; i < arrayLength; i++) {
-                        $('[data-node="#' + checkCollapsed[i] + '"]').next('.accordion_body').addClass('hide');
-                        $('[data-node="#' + checkCollapsed[i] + '"]').children('.plusminus').children('img').attr('src', 'img/accordian/plus.svg');
-                    }
-                }
-
-                var adjustCookie = function() {
-                    var tags = [];
-                    $('.accordion_container .hide').each(function() {
-                        var tag = $(this).prev('.accordion_head').data('node');
-                        tags.push(tag.replace('#', ''));
-                    });
-
-                    if (tags.length) {
-                        Cookies.set('collapsed_Nodes', tags.join('|'), {
-                            expires: 7,
-                            path: window.location.pathname
-                        });
-                    } else {
-                        Cookies.remove('collapsed_Nodes', {
-                            path: window.location.pathname
-                        });
-                    }
-                }
-
-                $('.accordion_head').click(function() {
-                    if ($(this).next('.accordion_body').is(':visible')) {
-                        $(this).next('.accordion_body').slideUp(300);
-                        $(this).next('.accordion_body').addClass('hide');
-                        $(this).children('.plusminus').children('img').attr('src', 'img/accordian/plus.png');
-                    } else {
-                        $(this).next('.accordion_body').slideDown(300);
-                        $(this).next('.accordion_body').removeClass('hide');
-                        $(this).children('.plusminus').children('img').attr('src', 'img/accordian/minus.png');
-                    }
-                    adjustCookie();
-                });
-            });
-
-
-        });
-    </script>
-
-
-
+   
 
 
 </body>

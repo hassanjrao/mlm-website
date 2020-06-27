@@ -2,14 +2,19 @@
   padding-left: 5rem;
   padding-right: 5rem;
 
-  .enquiry-btn {
-    position: absolute;
-    top: 14%;
-    left: 88.8%;
-    transform: translate(-50%, -50%);
-    font-size: xx-small;
-    font-weight: bold;
-    background: #7fad39;
-    color: white;
-  }
+ 
+}
+
+  
+.enquiry-btn {
+  position: absolute;
+  top: 30%;
+  left: 97.3%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: bold;
+  background: rgba(127,173,57, 0.8);
+  color: $white-color;
+  border: 3px solid #cce5ff;
+  z-index: 2;
 }

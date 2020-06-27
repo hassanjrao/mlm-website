@@ -1,5 +1,10 @@
 <!-- Hero Section Begin -->
+<button class="enquiry-btn btn" data-toggle="modal" data-target="#myModal" type="button">E<br>N<br>Q<br>U<br>I<br>R<br>Y</button>
+
+
+
 <section class="hero pt-5">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-3 ">
@@ -59,7 +64,8 @@
 
 
                 </div>
-                <button class="enquiry-btn btn" data-toggle="modal" data-target="#myModal" type="button">E<br>N<br>Q<br>U<br>I<br>R<br>Y</button>
+
+               
 
                 <!-- The Modal -->
                 <div class="modal" id="myModal">
@@ -109,6 +115,7 @@
 
 
     </div>
+
 </section>
 
 
