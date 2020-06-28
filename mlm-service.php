@@ -3,7 +3,20 @@ session_start();
 
 $ct = $_GET["city"];
 
-$id=$_SESSION[$ct];
+if (!isset($_SESSION[$ct])) {
+
+    $query = $conn->prepare("SELECT * FROM cities_tb");
+    $query->execute();
+    while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+        $_SESSION[$result["city"]] = $result["id"];
+    }
+}
+
+
+
+$id = $_SESSION[$ct];
+
+
 
 
 
@@ -12,10 +25,10 @@ $query = $conn->prepare("SELECT * FROM cities_tb WHERE id='$id'");
 $query->execute();
 $result = $query->fetch(PDO::FETCH_ASSOC);
 
-$city=ucwords($result["city"]);
-$email=$result["email"];
-$phone=$result["phone"];
-$url=$result["url"];
+$city = ucwords($result["city"]);
+$email = $result["email"];
+$phone = $result["phone"];
+$url = $result["url"];
 
 
 
@@ -72,7 +85,7 @@ $url=$result["url"];
                         <article class="pb-3">
 
                             <h1>MLM in <?php echo $city ?></h1>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url "?></p>
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
                             <p class="mt-4">Many companies use many different kinds of strategies and techniques to boost their sales and grow their business. Among many other techniques, one is MLM. MLM is an abbreviation of Multilevel Marketing. In Multilevel Marketing, direct sales companies tell their current product or service distributors to hire new distributors at a percentage of their wages. These new hirees then further recruit more people and create levels of sales. </p>
 
 
@@ -123,8 +136,8 @@ $url=$result["url"];
 
                         <article class="mb-5">
                             <p class="mt-4">MLM techniques have been quite effective in the business world for long now. One can easily choose the process of MLM and let recruiters recruit more recruiters. It's almost like handing out a little part of your business to people below you. This sense of responsibility makes everyone work their best and generate mega sales in little time!</p>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url "?></p>
-                            
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
                         </article>
 
 
@@ -148,10 +161,13 @@ $url=$result["url"];
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main2.js"></script>
+    <script src="js/main4.js"></script>
 
 
 </body>
 
 </html>
 
+<?php
+
+?>

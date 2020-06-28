@@ -86,7 +86,7 @@
             },
 
             992: {
-                items: 4,
+                items: 3,
             }
         }
     });
@@ -152,6 +152,14 @@
             $(this).children('.plusminus').children('i').attr('class', 'fas fa-minus-square');
         }
         adjustCookie();
+    });
+
+
+    $(".contact-btn").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".footer").offset().top},
+            'slow');
+
     });
 
 

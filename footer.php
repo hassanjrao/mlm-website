@@ -86,7 +86,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                         $ct = preg_replace('/\s+/', '-', $city);
                                         $_SESSION[$ct] = $id;
                                     ?>
-                                        <li class="ml-2"><a target="_blank" href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+                                        <li class="ml-2"><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
                                     <?php
                                     }
@@ -194,7 +194,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                         $ct = preg_replace('/\s+/', '-', $city);
                                         $_SESSION["$ct"] = $id;
                                     ?>
-                                        <li class="ml-2"><a target="_blank" href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+                                        <li class="ml-2"><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                     <?php }
                                     //  var_dump($done_cities);
@@ -300,6 +300,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                         </ul>
                     </div>
+                  
                 </div>
 
 
@@ -307,7 +308,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                 <div class="col-lg-4 my-auto">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
+                            <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
                                 <!--<img src="img/logo.png" alt="">--></a>
                         </div>
                         <form action="" method="POST" id="captcha-form">
@@ -345,7 +346,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                     </div>
                     <div class="footer__widget__social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="www.fb.com"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter-square"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-pinterest"></i></a>

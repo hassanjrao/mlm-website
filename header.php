@@ -24,7 +24,7 @@
 
             <li><a href="#">Network Marketing</a>
                 <ul class="header__menu__dropdown">
-                    <li><a href="#">Network Marketing</a></li>
+                    <li><a href="network-marketing.php">Network Marketing</a></li>
                     <li><a href="#">Multi Level Marketing</a></li>
                     <li><a href="multi-level-marketers.php">Multi Level Marketers</a></li>
                     <li><a href="direct-marketing.php">Direct Marketing</a></li>
@@ -46,7 +46,7 @@
     </div>
     <div class="humberger__menu__contact">
         <ul>
-            <li><i class="fa fa-envelope"></i> Contact US someone@mail.com</li>
+            <li><i class="fa fa-envelope"></i> Contact us rickson7@yahoo.com</li>
         </ul>
     </div>
 </div>
@@ -90,7 +90,7 @@
                         <li><a href="#">Network Marketing</a>
 
                             <ul class="header__menu__dropdown">
-                                <li><a href="#">Network Marketing</a></li>
+                                <li><a href="network-marketing.php">Network Marketing</a></li>
                                 <li><a href="#">Multi Level Marketing</a></li>
                                 <li><a href="multi-level-marketers.php">Multi Level Marketers</a></li>
                                 <li><a href="direct-marketing.php">Direct Marketing</a></li>
@@ -100,7 +100,7 @@
                         </li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="contact-btn">Contact</a></li>
                     </ul>
                 </nav>
             </div>
