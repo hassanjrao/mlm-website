@@ -9,12 +9,13 @@
 .enquiry-btn {
   position: absolute;
   top: 30%;
-  left: 97.3%;
+  left: 96.7%;
   transform: translate(-50%, -50%);
-  font-size: 10px;
+  font-size: 18px;
   font-weight: bold;
-  background: rgba(127,173,57, 0.8);
+  background: $primary-color;
   color: $white-color;
   border: 3px solid #cce5ff;
   z-index: 2;
+  padding: 0px 16px;
 }

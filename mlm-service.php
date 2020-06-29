@@ -4,6 +4,8 @@ session_start();
 $ct = $_GET["city"];
 
 
+
+
 if (!isset($_SESSION[$ct])) {
 
     $query = $conn->prepare("SELECT * FROM cities_tb");
@@ -12,8 +14,6 @@ if (!isset($_SESSION[$ct])) {
         $cti = preg_replace('/\s+/', '-', $result["city"]);
         $_SESSION[strtolower($cti)] = $result["id"];
     }
-
-   
 }
 
 
@@ -42,7 +42,7 @@ $url = $result["url"];
 <html lang="zxx">
 
 
-<body>
+<body onload="getMap()">
 
     <!-- head start -->
 
@@ -84,8 +84,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-
+                    <div class="col-lg-6">
                         <article class="pb-3">
 
                             <h1>MLM in <?php echo $city ?></h1>
@@ -94,6 +93,18 @@ $url = $result["url"];
 
 
                         </article>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div style="width: 620px; height: 450px" id="mapContainer">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
 
                         <article class="pb-3">
                             <h1>MLM meaning :</h1>
@@ -166,12 +177,51 @@ $url = $result["url"];
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/main4.js"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+
+
 
 
 </body>
 
 </html>
+<script>
+    function getMap() {
+        var citi = '<?php echo $_GET["city"] ?>';
+        console.log(citi);
+        $.ajax({
+            url: 'https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s&gen=9&searchtext=' + citi,
+            type: 'GET',
+            data: citi,
+            success: function(result) {
+                console.log(result);
 
-<?php
+                var longt = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"];
+                var latit = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"];
 
-?>
+
+
+
+                var platform = new H.service.Platform({
+                    'apikey': 'F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s'
+                });
+
+                // Obtain the default map types from the platform object
+                var maptypes = platform.createDefaultLayers();
+
+                // Instantiate (and display) a map object:
+                var map = new H.Map(
+                    document.getElementById('mapContainer'),
+                    maptypes.vector.normal.map, {
+                        zoom: 10,
+                        center: {
+                            lng: longt,
+                            lat: latit
+                        }
+                    });
+
+            }
+        });
+    }
+</script>
