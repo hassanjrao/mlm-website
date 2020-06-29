@@ -1,4 +1,40 @@
 <?php include("database/db.php");
+session_start();
+
+$ct = $_GET["city"];
+
+
+if (strpos($ct, "tekirda") !== false) {
+    $ct = "tekirda" . "&#x0011F";
+}
+
+
+
+
+
+if (!isset($_SESSION[$ct])) {
+
+    $query = $conn->prepare("SELECT * FROM cities_tb");
+    $query->execute();
+    while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+        $cti = preg_replace('/\s+/', '-', $result["city"]);
+        $_SESSION[strtolower($cti)] = $result["id"];
+    }
+}
+
+
+
+$id = $_SESSION[$ct];
+
+
+$query = $conn->prepare("SELECT * FROM cities_tb WHERE id='$id'");
+$query->execute();
+$result = $query->fetch(PDO::FETCH_ASSOC);
+
+$city = ucwords($result["city"]);
+$email = $result["email"];
+$phone = $result["phone"];
+$url = $result["url"];
 
 
 
@@ -8,7 +44,7 @@
 <html lang="zxx">
 
 
-<body>
+<body onload="getMap()">
 
     <!-- head start -->
 
@@ -17,10 +53,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="mlm,mlm-companies">
-        <meta name="keywords" content="mlm,mlm-companies,companies">
+        <meta name="description" content="home">
+        <meta name="keywords" content="mlm">
+        <meta name="description" content="text/html">
+        <meta name="keywords" content=<?php echo "mlm-companies-in,$ct" ?>>
 
-        <title>MLM Companies</title>
+        <title><?php echo "MLM Companies in $city" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -44,20 +82,38 @@
     <!-- Left Menu + Slider End -->
 
 
-    <main class="pt-5">
+    <main class="pt-2">
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
+                        <article class="mt-0">
 
-                        <article class="pb-3">
-
-                            <h1>MLM Companies</h1>
-                            <p class="mt-4">
+                            <h1>MLM Companies in <?php echo $city ?></h1>
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+                            <p class="mt-5">
                                 Companies, that use a model or marketing strategy in which the distributors' income includes their sales, can be classified as MLM Companies.
                                 <br>There are several large network marketing companies in the world that not only deliver some of the best health-based or other sector goods but also give you the ability to enter the business by being a distributor or a direct seller and receiving extra passive income.
 
                             </p>
+
+
+
+                        </article>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <article>
                             <p>
                                 These MLM companies are credible and have thousands (some millions) of distributors working for them all over the world. They also offer some unique health and wellness products that you can't find in popular retail stores like Walmart, Costco, Walgreen, Amazon, etc. Network marketing is the best way to get rich quickly. So if you're a happy family or just want to make some extra cash to sell the stuff you need. Read this article and learn about the world's leading 10 network marketing companies.
                             </p>
@@ -77,8 +133,8 @@
                             <p>
                                 Not all new MLM companies are created on an equal footing and not all network marketing companies offer the same product sales or downline development opportunities. The best up-and-coming new network marketing startup brands ready for pre-launch or outstanding home business bonus opportunities for 2020-2021!
                             </p>
-
                         </article>
+
 
                         <article class="pb-3">
                             <h1 style="font-weight:350;">MLM Marketing</h1>
@@ -187,8 +243,9 @@
                             <h3>Is MLM Marketing a Pyramid scheme?</h3>
                             <p class="mt-4">MLM marketing is legitimate, if somewhat controversial, business strategy. One problem is pyramid schemes that use money from recruits to pay people at the top rather than those who do the job. Such schemes include making the most of people by pretending to be engaged in legal multilevel or network marketing.</p>
                             <p>You will spot pyramid schemes by concentrating more on recruiting than on product sales. No products are involved in this scheme, get more people to dump money to make more money. However, in MLM, product sales can generate real revenue, creating a sustainable ecosystem for both themselves and their down-lines.</p>
-                        </article>
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
 
+                        </article>
 
                     </div>
                 </div>
@@ -218,4 +275,44 @@
 </body>
 
 </html>
+<script>
+    function getMap() {
+        var citi = '<?php echo $_GET["city"]; ?>';
 
+        if (citi.includes("tekirda")) {
+            citi = "Tekirdağ"
+        }
+        console.log(citi);
+        $.ajax({
+            url: 'https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s&gen=9&searchtext=' + citi,
+            type: 'GET',
+            data: citi,
+            success: function(result) {
+                console.log(result);
+
+                var longt = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"];
+                var latit = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"];
+
+
+                var platform = new H.service.Platform({
+                    'apikey': 'F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s'
+                });
+
+                // Obtain the default map types from the platform object
+                var maptypes = platform.createDefaultLayers();
+
+                // Instantiate (and display) a map object:
+                var map = new H.Map(
+                    document.getElementById('mapContainer'),
+                    maptypes.vector.normal.map, {
+                        zoom: 10,
+                        center: {
+                            lng: longt,
+                            lat: latit
+                        }
+                    });
+
+            }
+        });
+    }
+</script>

@@ -23,6 +23,7 @@
             var containerEl = document.querySelector('.featured__filter');
             var mixer = mixitup(containerEl);
         }
+        
     });
 
 
@@ -155,13 +156,17 @@
     });
 
 
-    $(".contact-btn").click(function() {
+    $(".contact-btn").click(function () {
         $('html,body').animate({
-            scrollTop: $(".footer").offset().top},
+            scrollTop: $(".footer").offset().top
+        },
             'slow');
 
     });
 
+
+
+    
 
 
 

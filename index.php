@@ -121,7 +121,7 @@ session_start();
             <div class="accordion_head" data-node="#1">2. Lorem ipsum:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
-                <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Member��s coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
+                <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Members coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
             </div>
 
             <div class="accordion_head" data-node="#1">3. Courses:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>

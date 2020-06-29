@@ -1,50 +1,11 @@
 <?php include("database/db.php");
-session_start();
-
-$ct = $_GET["city"];
-
-
-if (strpos($ct, "tekirda") !== false) {
-    $ct = "tekirda" . "&#x0011F";
-}
-
-
-
-
-
-if (!isset($_SESSION[$ct])) {
-
-    $query = $conn->prepare("SELECT * FROM cities_tb");
-    $query->execute();
-    while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
-        $cti = preg_replace('/\s+/', '-', $result["city"]);
-        $_SESSION[strtolower($cti)] = $result["id"];
-    }
-}
-
-
-
-$id = $_SESSION[$ct];
-
-
-$query = $conn->prepare("SELECT * FROM cities_tb WHERE id='$id'");
-$query->execute();
-$result = $query->fetch(PDO::FETCH_ASSOC);
-
-$city = ucwords($result["city"]);
-$email = $result["email"];
-$phone = $result["phone"];
-$url = $result["url"];
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
 
 
-<body onload="getMap()">
+<body>
 
     <!-- head start -->
 
@@ -55,10 +16,10 @@ $url = $result["url"];
 
         <meta name="description" content="home">
         <meta name="keywords" content="mlm">
-        <meta name="description" content=<?php echo "mlm,$ct" ?>>
-        <meta name="keywords" content=<?php echo "mlm,$ct" ?>>
+        <meta name="description" content="text/html">
+        <meta name="keywords" content=<?php echo "mlm" ?>>
 
-        <title><?php echo "MLM in $city" ?></title>
+        <title><?php echo "MLM" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -86,27 +47,13 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <article class="pb-3">
 
-                            <h1>MLM in <?php echo $city ?></h1>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
-                            <p class="mt-4">Many companies use many different kinds of strategies and techniques to boost their sales and grow their business. Among many other techniques, one is MLM. MLM is an abbreviation of Multilevel Marketing. In Multilevel Marketing, direct sales companies tell their current product or service distributors to hire new distributors at a percentage of their wages. These new hirees then further recruit more people and create levels of sales. </p>
-
-
-                        </article>
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div style="width: 620px; height: 450px" id="mapContainer">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
                     <div class="col-lg-12">
+
+                        <article class="pb-3">
+                            <h1>MLM</h1>
+                            <p class="mt-4">Many companies use many different kinds of strategies and techniques to boost their sales and grow their business. Among many other techniques, one is MLM. MLM is an abbreviation of Multilevel Marketing. In Multilevel Marketing, direct sales companies tell their current product or service distributors to hire new distributors at a percentage of their wages. These new hirees then further recruit more people and create levels of sales. </p>
+                        </article>
 
                         <article class="pb-3">
                             <h1>MLM meaning :</h1>
@@ -153,7 +100,6 @@ $url = $result["url"];
 
                         <article class="mb-5">
                             <p class="mt-4">MLM techniques have been quite effective in the business world for long now. One can easily choose the process of MLM and let recruiters recruit more recruiters. It's almost like handing out a little part of your business to people below you. This sense of responsibility makes everyone work their best and generate mega sales in little time!</p>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
 
                         </article>
 
@@ -186,44 +132,3 @@ $url = $result["url"];
 </body>
 
 </html>
-<script>
-    function getMap() {
-        var citi = '<?php echo $_GET["city"]; ?>';
-
-        if (citi.includes("tekirda")) {
-            citi = "Tekirdağ"
-        }
-        console.log(citi);
-        $.ajax({
-            url: 'https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s&gen=9&searchtext=' + citi,
-            type: 'GET',
-            data: citi,
-            success: function(result) {
-                console.log(result);
-
-                var longt = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"];
-                var latit = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"];
-
-
-                var platform = new H.service.Platform({
-                    'apikey': 'F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s'
-                });
-
-                // Obtain the default map types from the platform object
-                var maptypes = platform.createDefaultLayers();
-
-                // Instantiate (and display) a map object:
-                var map = new H.Map(
-                    document.getElementById('mapContainer'),
-                    maptypes.vector.normal.map, {
-                        zoom: 10,
-                        center: {
-                            lng: longt,
-                            lat: latit
-                        }
-                    });
-
-            }
-        });
-    }
-</script>

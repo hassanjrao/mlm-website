@@ -134,10 +134,10 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                                         $z++;
 
-
+                                        $ct = preg_replace('/\s+/', '-', $city);
+                                        $_SESSION[$ct] = $id;
                                     ?>
-
-                                        <li class="ml-2"><a href="#"><?php echo ucwords($city) ?></a></li>
+                                        <li class="ml-2"><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
 
                                     <?php }
@@ -192,7 +192,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                         $ct = preg_replace('/\s+/', '-', $city);
                                         $_SESSION["$ct"] = $id;
                                     ?>
-                                        <li class="ml-2"><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+                                        <li class="ml-2"><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                     <?php }
                                     //  var_dump($done_cities);
