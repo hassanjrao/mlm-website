@@ -63,7 +63,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                         ?>
 
-                        <div class="col-lg-6 border border-top-0 border-left-0">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 border border-top-0 border-left-0">
 
 
                             <div class="footer__widget ">
@@ -91,8 +91,6 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                     <?php
                                     }
 
-                                    // var_dump($done_cities);
-                                    // var_dump($done_ids);
 
                                     ?>
 
@@ -104,7 +102,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                         </div>
 
-                        <div class="col-lg-6 border border-top-0 border-left-0">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 border border-top-0 border-left-0">
 
                             <div class="footer__widget">
 
@@ -157,7 +155,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                     <div class="row">
 
-                        <div class="col-lg-6 border border-top-0 border-left-0 border-bottom-0">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 border border-top-0 border-left-0 border-bottom-0">
                             <div class="footer__widget">
 
                                 <p class="mb-1 mt-4">Mlm companies in: </p>
@@ -205,7 +203,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                             </div>
                         </div>
 
-                        <div class="col-lg-6 border border-top-0 border-left-0 border-bottom-0">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 border border-top-0 border-left-0 border-bottom-0">
 
 
                             <div class="footer__widget">
@@ -284,8 +282,8 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                 </div>
 
-                <div class="col-lg-2 mt-4 my-auto">
-                    <div class="footer__widget">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
+                    <div class="footer__widget blog">
                         <ul>
                             <li><a href="#">Blog Links 1</a></li>
                             <li><a href="#">Blog Links 2</a></li>
@@ -300,17 +298,13 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                         </ul>
                     </div>
-                  
+
                 </div>
 
 
 
-                <div class="col-lg-4 my-auto">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
-                                <!--<img src="img/logo.png" alt="">--></a>
-                        </div>
                         <form action="" method="POST" id="captcha-form">
                             <input type="text" class="form-control" placeholder="Name" name="name" required="">
                             <input type="email" class="form-control" placeholder="Email" name="email" required="">
@@ -340,9 +334,10 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
         <div class="row">
             <div class="col-lg-12">
                 <div class="footer__copyright">
-                    <div class="footer__copyright__text my-auto">
+                    <div class="footer__copyright__text">
 
-                        <p>Copyright ©<?php echo date("Y"); ?> All rights reserved</p>
+                        <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
+                            <!--<img src="img/logo.png" alt="">--></a>
 
                     </div>
                     <div class="footer__widget__social">

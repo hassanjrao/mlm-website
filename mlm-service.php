@@ -3,13 +3,17 @@ session_start();
 
 $ct = $_GET["city"];
 
+
 if (!isset($_SESSION[$ct])) {
 
     $query = $conn->prepare("SELECT * FROM cities_tb");
     $query->execute();
     while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
-        $_SESSION[$result["city"]] = $result["id"];
+        $cti = preg_replace('/\s+/', '-', $result["city"]);
+        $_SESSION[strtolower($cti)] = $result["id"];
     }
+
+   
 }
 
 

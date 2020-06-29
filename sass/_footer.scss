@@ -4,6 +4,7 @@
 .footer {
   background: $primary-color;
   padding-top: 18px;
+  margin-top: 101px;
   p {
     font-size: 14px;
     color: $white-color;
@@ -14,12 +15,14 @@
   margin-bottom: 20px;
 
   form {
+   
+
     background: #248b06;
     padding: 1.5rem;
     border-radius: 10px;
-    width: 97%;
+    width: 96%;
     input {
-      width: 100%;
+      width: 92%;
       font-size: 16px;
       padding-left: 20px;
       margin-bottom: 0.5rem;
@@ -27,7 +30,7 @@
     }
     textarea {
       height: 54.5px;
-      width: 100%;
+      width: 92%;
       font-size: 16px;
       padding-left: 20px;
       margin-bottom: 0.5rem;
