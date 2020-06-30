@@ -91,10 +91,7 @@
                                 <li>Income that flows even when you pause from work: through MLM, you can still be making money if you fall sick or want a break from work. You have lower-level distributors who are always in action to produce more sales. In MLM, it is a rule that you get a percentage of commission for the sales made by people in levels lower than you who are in your network.</li>
                                 <li>Low startup costs: not all of us have a divided amount of capital set aside to be spent in business, do we? For such circumstances where you can't afford starting a business single-handedly, you can join an MLM. Here you will have to invest money only as low as $500 and start making sales to earn commissions. This is an efficient way of being firm on your grounds until you get ready to have your own startup business.</li>
                                 <li>Discount on products: the company you join for and MLM is sure to provide you discounts on their services and products. These discounts can be up to 20% to 50% and can get topped up based on your relations with the company and your hard work. You can always get the advantages of joining a company you love.</li>
-
-
                             </ul>
-
                         </article>
 
 
@@ -102,6 +99,215 @@
                             <p class="mt-4">MLM techniques have been quite effective in the business world for long now. One can easily choose the process of MLM and let recruiters recruit more recruiters. It's almost like handing out a little part of your business to people below you. This sense of responsibility makes everyone work their best and generate mega sales in little time!</p>
 
                         </article>
+
+
+                        <div class="col-lg-12 mb-5">
+
+                            <div class="services-links">
+
+                                <h3 class="text-center mb-4">MLM Services in</h3>
+
+                                <?php
+                                $ind = 0;
+                                $cts = array();
+                                $ids = array();
+                                $z = 0;
+                                $done_cities = array();
+                                $done_ids = array();
+
+                                $query = $conn->prepare("SELECT * FROM cities_tb");
+                                $query->execute();
+
+                                while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                                    $cities[$ind] = $result["city"];
+                                    $ids[$ind] = $result["id"];
+                                    $ind++;
+                                }
+
+                                $totalCities = count($cities);
+
+                                $n = range(0, $totalCities - 1);
+                                shuffle($n);
+
+
+                                ?>
+
+                                <div class="row">
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+                                            <?php
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $cities[$i];
+                                                $id = $ids[$i];
+
+
+                                                $done_cities[$z] = $city;
+                                                $done_ids[$z] = $id;
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+                                            <?php
+                                            }
+
+
+                                            ?>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+
+                                            <?php }
+                                            // var_dump($done_cities);
+                                            // var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+                                            //  var_dump($done_cities);
+                                            //  var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+                                            //  var_dump($done_cities);
+                                            //  var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
                     </div>
@@ -124,7 +330,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main4.js"></script>
+    <script src="js/main5.js"></script>
 
 
 

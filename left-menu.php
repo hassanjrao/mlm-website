@@ -17,7 +17,7 @@
                         <li>MLM</li>
 
                         <ul>
-                            <li><a href="#">MLM</a></li>
+                            <li><a href="mlm.php">MLM</a></li>
                             <li><a href="mlm-companies.php">mlm companies</a></li>
                             <li><a href="#">mlm company</a></li>
                             <li><a href="mlm-business.php">mlm business</a></li>
@@ -57,7 +57,7 @@
 
                     ?>
 
-                        <img class="img-fluid" src="images/banner/<?php echo $result['image'];  ?>" width="100%">
+                        <img class="img-flu" src="images/banner/<?php echo $result['image'];  ?>" width="100%">
 
                     <?php } ?>
 

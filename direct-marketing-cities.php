@@ -8,7 +8,6 @@ if (strpos($ct, "tekirda") !== false) {
     $ct = "tekirda" . "&#x0011F";
 }
 
-
 if (!isset($_SESSION[$ct])) {
 
     $query = $conn->prepare("SELECT * FROM cities_tb");
@@ -50,12 +49,10 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
-        <meta name="description" content=<?php echo "mlm,$ct" ?>>
-        <meta name="keywords" content=<?php echo "mlm,$ct" ?>>
+        <meta name="description" content="direct marketing">
+        <meta name="keywords" content=<?php echo "direct-marketing-in-$city" ?>>
 
-        <title><?php echo "MLM in $city" ?></title>
+        <title><?php echo "Direct Marketing in $city" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -79,16 +76,32 @@ $url = $result["url"];
     <!-- Left Menu + Slider End -->
 
 
-    <main class="pt-2">
+    <main class="pt-5">
         <div class="service">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <article class="pb-3">
 
-                            <h1>MLM in <?php echo $city ?></h1>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
-                            <p class="mt-4">Many companies use many different kinds of strategies and techniques to boost their sales and grow their business. Among many other techniques, one is MLM. MLM is an abbreviation of Multilevel Marketing. In Multilevel Marketing, direct sales companies tell their current product or service distributors to hire new distributors at a percentage of their wages. These new hirees then further recruit more people and create levels of sales. </p>
+                        <article class="pb-3 pt-0">
+
+                            <span>
+                                <h1>Direct Marketing </h1><br>
+                                <p>(Everything you need to know about it)</p>
+                            </span>
+
+                            <p class="mt-4">
+                                A large number of home based business opportunities are available for the people to consider. Out of those business opportunities, direct marketing has received lots of positive attention in the recent past. Hence, it is worthy to take a look at this business opportunity and figure out what comes along with it. Then you can go ahead and experience the benefits that come out of it as well.
+                            </p>
+
+                            <p>
+                                What exactly is direct marketing?
+                            </p>
+                            <p>
+                                As the very first thing, let’s take a look at the definition of direct marketing. Direct marketing is the process where you are selling products directly to your customers. You will be doing this within a non-retail environment. That’s because the sales don’t take place at work, home, online or any other location where there isn’t a store.
+                            </p>
+                            <p>
+                                One of the best things about direct marketing is that it can helps to eliminate middlemen. Therefore, product distribution can be done in a better way. There are no wholesalers or regional distribution centers. The products manufactured within a company will go directly into the direct sales company, the sales representative or the distributor. Then they will pass the products to the consumers.
+                            </p>
 
 
                         </article>
@@ -96,72 +109,94 @@ $url = $result["url"];
 
                     <div class="col-lg-6">
 
-                        <div style="width: 620px; height: 450px" id="mapContainer">
+                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
+
                         </div>
                     </div>
 
                 </div>
-
                 <div class="row">
                     <div class="col-lg-12">
 
                         <article class="pb-3">
-                            <h1>MLM meaning :</h1>
-                            <p class="mt-4">Multilevel marketing is an effective strategy used by companies to dig deep into the market to make profits. As every business is started with hopes of increasing sales and profits every day. MLM is an easy and fast solution of going from no sales to full sales. One should always remember that MLM is not a shortcut to more sales. It is just a simple and effective technique of attracting more customers to your business. Like any other corporate strategy, MLM requires hard work, persistence, and constant efforts to achieve a success rate.</p>
-                            <p>It should also be kept in notice that you will hear many people grading MLM as an illegal practice, though it is not illegal. The case is that some similar techniques are illegal, but MLM is different from them in many ways. The illegal tactics for more sales are used by fraudulent companies to gain success overnight. If a company has put its mind to adopting the MLM techniques of generating sales, then they must abide by the rules and regulations of their MLM. Following the legal ways of generating sales and making your employees do so as well, is the best and most authentic way of gaining success as a business. </p>
-                            <p>The reason why many companies adopt MLM for their marketing and sales is the rate of flexibility they get to involve more and more people in their business. Due to its simplicity, some companies start thinking MLM to be a do-no-work-and-gain-success kind of practice, which it is not. It demands an equal amount of effort and hard work as any other business strategy would. Once you step on the path of hard work, you are not far from real and authentic success.</p>
+
+
+                            <h1 style="font-weight:350;">Direct selling industry </h1>
+
+                            <p class="mt-4">
+                                The products that are being sold through direct marketing aren’t usually available for purchase through retail locations. This makes the direct selling industry more exciting. The sales representative or the distributor will be the only person, who should be contacted in order to purchase the services or products that are available.
+                            </p>
+                            <p>
+                                It is also possible for you to find how direct selling business model is linked with network marketing and part planning companies. This can be considered as another variation of direct selling, which you can find within the direct selling industry. Likewise, it is also possible for you to discover how a large number of B2B companies use direct selling to get the products delivered to end customers. For example, there are companies selling office supplies, who send out the representatives directly into the stores and start using the services.
+                            </p>
+
+                            <p>
+                                Different direct marketing types available in the direct selling industry
+                            </p>
+
+                            <p>
+                                Direct selling industry is a massive one. When you deep dive and take a look at the industry, you will be able to discover many different business models. Here are some of the most prominent business models that you can find in there.
+                            </p>
+
+                            <span>
+                                <p>- Single level direct sales </p>
+                                <p>Single level direct sales is the most basic type of direct marketing. This is where one on one marketing is done. Door to door marketing efforts fall under this category. Likewise, you can also classify in-person presentations into this category as well. In here, you are provided with the freedom to make sales online or via catalogs. The income you earn out of here is generally made out of commissions. In the meantime, it is possible to generate bonuses as well.</p>
+                            </span>
+
+                            <span>
+                                <p>- Party plan sales </p>
+                                <p>Party plan sales are taking place within groups. It is associated with a sales representative or a distributor, who is conducting a presentation at his own home or in the home of another person. In some of the rare instances, companies associated with this would sell to individuals within the business as well. </p>
+                                <p>Let’s take a look at a sales representative who is promoting a real estate software. He can do direct marketing through a group sales presentation. This group can be a set of realtors. Then he will be able to earn a commission via sales. Moreover, recruitment of other representatives can also help to generate an income.</p>
+                            </span>
+
+                            <span>
+                                <p>- Multi level marketing </p>
+                                <p>
+                                    Multi level marketing, which is also known as MLM is one of the most prominent business models that you can find within the direct selling industry. People who are associated with this sales model are provided with the chance to earn a revenue through many different methods. It includes both single presentations and party presentations. Income can also be earned through catalogs and online stores.
+                                </p>
+                                <p>
+                                    The main method of income generation in the MLM business model is sales commission. In addition to that, a person will be able to earn an income based on the sales that are made by new sales representatives, who are recruited under him into the company.
+                                </p>
+                                <p>
+                                    In most of the instances, direct marketing is known as network marketing and MLM. It is true that both network marketing and MLM are types of direct sales. However, not all the direct sales belong into this.
+                                </p>
+                            </span>
                         </article>
 
                         <article class="pb-3">
-                            <h2>What is multilevel marketing?</h2>
-                            <p class="mt-4">Multilevel Marketing abbreviated as MLM is a marketing strategy adopted by businesses and companies through which they create levels of distributors. These distributors further recruit more people and give wages to the lower level distributors as a percentage of their income. The people at higher levels of an MLM are given enough money to support themselves and also to pay people on the lower levels than them. Many companies that don't want to employ a huge employee force to sell their products use the technique of MLM for fast and efficient sales of their products and services.</p>
+                            <span>
+                                <h2>Matrix Plan</h2>
+                                <p class="">(Calculating the income through Matrix Plan)</p>
+                            </span>
+
+                            <p>
+
+                                When you are engaged with MLM direct marketing, you will come across the need to make more money with the sales representatives that you are recruiting under you. This is where matrix plan will be able to deliver support and assistance to you with.
+                            </p>
+                            <p>
+                                A matrix plan can simply be considered as a pyramid structure, which has a fixed number of columns and rows. This will restrict the total number of distributors that you will be able to sponsor within the very first level. When the width is reduced by the matrix plan, it is possible to motivate and hire additional members within the downline.
+                            </p>
+                            <p>
+                                One of the most prominent aspects that you can find in matrix plan is the restricted width. This is quite different from the MLM compensation plans. That’s because the matrix would restrict the total number of distributors that you will be able to sponsor within the very first level. This will usually be under 5. Then you can grow the depth of the tree under you. Along with that, it is possible for you to increase the overall revenue that you generate while reducing the efforts that you spend.
+                            </p>
+                            <p>
+                                Final words
+                            </p>
+                            <p>
+                                Keep these facts in your mind and get started with MLM or direct marketing. You will appreciate all the benefits that it can provide you with. It is one of the most exciting home based business models available for you to consider as of now as well. Just get your hands on it and experience the amazing benefits offered.
+                            </p>
                         </article>
 
-                        <article class="pb-3">
-                            <h3>Dynamics of an MLM:</h3>
-                            <p class="mt-4">A multilevel marketing structure can to some extent resemble an illegal practice that we will discuss later. But those who have good knowledge can see the difference quite distinctly between the two. MLM is a legal practice that has a network of a different number of employees who are divided into parts. These employees can further have a different number of people based upon the potential of the recruiter. If a recruiter can not afford to pay many people for the sales they make than he only has a smaller part of the level. But if a recruiter generates good money through hard work and patience, then he can hire more people and hence grow his network.</p>
-
-                        </article>
-
-                        <article class="pb-3">
-                            <h4>Multilevel Marketing vs. Pyramid Marketing:</h4>
-                            <p class="mt-4">One is legal and the other illegal. MLM is a technique adopted and practiced by many businesses worldwide. This technique involves legal ways of selling products and hiring recruiters. But Pyramid marketing is the opposite. It is considered illegal as it makes you put your money into the business to make it grow and hire new people, whereas MLM is just distributing a company's products from larger networks out to the customers or other distributors. This way, MLM brings legal sales to the companies and hence plenty of room for success.</p>
-                            <p>Another distinct factor that sets MLM and pyramid marketing apart is the requirement of each level doubling to reach another level in the later. This creates pressure upon people in the lower levels and hence makes pyramid marketing illegal. On the other hand, MLM makes commission-based wages to distributors based on the number of items sold and also of the sales made by people at lower levels.</p>
-                            <p>Though it is legal, MLM still makes people ponder a good while before joining it. The sole reason behind it is that MLM brings untested, and new products into the market for sale. It puts people off from joining it, and they also check if the company is reliable enough or not.</p>
-
-                        </article>
-
-                        <article class="pb-3">
-                            <h4>Should I join an MLM?</h4>
-                            <p class="mt-4">Joining MLMs has been quite effective from ever. People have seen quite significant results in shorter spans of time. Businesses take leaps after having an MLM strategy of making sales. </p>
-
-                            <p>Some benefits of joining MLM are:</p>
-
-                            <ul>
-                                <li>Income that flows even when you pause from work: through MLM, you can still be making money if you fall sick or want a break from work. You have lower-level distributors who are always in action to produce more sales. In MLM, it is a rule that you get a percentage of commission for the sales made by people in levels lower than you who are in your network.</li>
-                                <li>Low startup costs: not all of us have a divided amount of capital set aside to be spent in business, do we? For such circumstances where you can't afford starting a business single-handedly, you can join an MLM. Here you will have to invest money only as low as $500 and start making sales to earn commissions. This is an efficient way of being firm on your grounds until you get ready to have your own startup business.</li>
-                                <li>Discount on products: the company you join for and MLM is sure to provide you discounts on their services and products. These discounts can be up to 20% to 50% and can get topped up based on your relations with the company and your hard work. You can always get the advantages of joining a company you love.</li>
-
-
-                            </ul>
-
-                        </article>
-
-
-                        <article class="mb-5">
-                            <p class="mt-4">MLM techniques have been quite effective in the business world for long now. One can easily choose the process of MLM and let recruiters recruit more recruiters. It's almost like handing out a little part of your business to people below you. This sense of responsibility makes everyone work their best and generate mega sales in little time!</p>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
-
-                        </article>
 
 
                     </div>
+
 
                     <div class="col-lg-12 mb-5">
 
                         <div class="services-links">
 
-                            <h3 class="text-center mb-4">MLM Services in</h3>
+                            <h3 class="text-center mb-4">Direct Marketing in</h3>
 
                             <?php
                             $ind = 0;
@@ -210,7 +245,7 @@ $url = $result["url"];
                                             $ct = preg_replace('/\s+/', '-', $city);
                                             $_SESSION[$ct] = $id;
                                         ?>
-                                            <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+                                            <li><a href=<?php echo "direct-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
                                         <?php
                                         }
@@ -255,7 +290,7 @@ $url = $result["url"];
                                             $ct = preg_replace('/\s+/', '-', $city);
                                             $_SESSION[$ct] = $id;
                                         ?>
-                                            <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+                                            <li><a href=<?php echo "direct-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
 
                                         <?php }
@@ -303,7 +338,7 @@ $url = $result["url"];
                                             $ct = preg_replace('/\s+/', '-', $city);
                                             $_SESSION["$ct"] = $id;
                                         ?>
-                                            <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+                                            <li><a href=<?php echo "direct-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
                                         //  var_dump($done_cities);
@@ -348,7 +383,7 @@ $url = $result["url"];
                                             $ct = preg_replace('/\s+/', '-', $city);
                                             $_SESSION["$ct"] = $id;
                                         ?>
-                                            <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+                                            <li><a href=<?php echo "direct-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
                                         //  var_dump($done_cities);
@@ -364,6 +399,8 @@ $url = $result["url"];
                         </div>
 
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -391,6 +428,7 @@ $url = $result["url"];
 </body>
 
 </html>
+
 <script>
     function getMap() {
         var citi = '<?php echo $_GET["city"]; ?>';

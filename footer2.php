@@ -32,28 +32,28 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                     <div class="row">
 
                         <?php
-                        // $ind = 0;
-                        // $cts = array();
-                        // $ids = array();
-                        // $z = 0;
-                        // $done_cities = array();
-                        // $done_ids = array();
+                        $ind = 0;
+                        $cts = array();
+                        $ids = array();
+                        $z = 0;
+                        $done_cities = array();
+                        $done_ids = array();
 
-                        // $query = $conn->prepare("SELECT * FROM cities_tb");
-                        // $query->execute();
+                        $query = $conn->prepare("SELECT * FROM cities_tb");
+                        $query->execute();
 
-                        // while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
-                        //     $cities[$ind] = $result["city"];
-                        //     $ids[$ind] = $result["id"];
-                        //     $ind++;
-                        // }
+                        while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                            $cities[$ind] = $result["city"];
+                            $ids[$ind] = $result["id"];
+                            $ind++;
+                        }
 
 
 
-                        // $totalCities = count($cities);
+                        $totalCities = count($cities);
 
-                        // $n = range(0, $totalCities - 1);
-                        // shuffle($n);
+                        $n = range(0, $totalCities - 1);
+                        shuffle($n);
 
                         ?>
 
@@ -63,47 +63,33 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                             <div class="footer__widget ">
                                 <p class="mb-1">MLM in: </p>
                                 <ul>
-
                                     <?php
-
-                                    $left = array_diff($cities, $done_cities);
-
-                                    $leftCities = array_values($left);
-
-                                    $l_ids = array_diff($ids, $done_ids);
-                                    $leftIds = array_values($l_ids);
-
-
-                                    $totalLeftCities = count($leftCities);
-
-                                    $n = range(0, $totalLeftCities - 1);
-                                    shuffle($n);
 
                                     for ($x = 0; $x < 5; $x++) {
                                         $i = $n[$x];
 
-                                        $city = $leftCities[$i];
+                                        $city = $cities[$i];
+                                        $id = $ids[$i];
+
+
                                         $done_cities[$z] = $city;
-
-
-                                        $id = $leftIds[$i];
                                         $done_ids[$z] = $id;
-
                                         $z++;
 
 
                                         $ct = preg_replace('/\s+/', '-', $city);
-                                        $_SESSION["$ct"] = $id;
+                                        $_SESSION[$ct] = $id;
                                     ?>
-                                        <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+                                        <li class="ml-2"><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
 
-                                    <?php }
-                                    //  var_dump($done_cities);
-                                    //  var_dump($done_ids);
+                                    <?php
+                                    }
+
+
                                     ?>
+
 
                                 </ul>
-
                             </div>
 
 

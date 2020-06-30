@@ -112,28 +112,61 @@ session_start();
         <div class=" container">
             <h3 class="text-center mb-4">Expandable FAQ:</h3>
 
-            <div class="accordion_head" data-node="#1">1. Eligibility:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="accordion_head" data-node="#1">1. How should we recruit people?
+                <div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
-                <p>The members eligible for Insurance benefit are the present and future cardholders of the Participant who have fulfilled all the requirements set out by the Participant for subscribing under its discount card membership scheme and are within the Eligibility Age range defined in the Participant's Specific Schedule.</p>
+                <p>You should build a team initially by talking with the people you already know are a right fit for the MLM Business.
+                    Most people have a a circle of known contacts between 100 to 1000 people.
+                    Sometimes, you will be able to sponsor some deserving contacts to start your team.
+                    Over time as you get successful, you can use online marketing, paid advertising,
+                    and further networking to find new aspirants.
+                </p>
             </div>
 
-            <div class="accordion_head" data-node="#1">2. Lorem ipsum:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="accordion_head" data-node="#1">2. How do does one many money in MLM?
+                <div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
-                <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Members coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
+                <p>You earn money from retail profits of your personal sales.
+                    And you earn commissions and bonuses from your team’s sales.
+                    So basically , you are an independent business person working
+                    in the sales force for the MLM Company.
+                    Every compensation plan is different, but you are normally paid
+                    a good commission and percentage from your entire organization’s sales.
+                </p>
             </div>
 
-            <div class="accordion_head" data-node="#1">3. Courses:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="accordion_head" data-node="#1">3. Is MLM legal?<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
-                <p>The members eligible for Insurance benefit are the present and future cardholders of the Participant who have fulfilled all the requirements set out by the Participant for subscribing under its discount card membership scheme and are within the Eligibility Age range defined in the Participant's Specific Schedule.</p>
+                <p>Of course Yes!
+                    Network marketing or MLM is legal in the United States and almost every other country.
+                    In 1979 Amway fought the Federal Trade Commission and won a huge victory for the network marketing industry.
+                    The essence in being legal is that, distributors must focus on selling actual products
+                    and not focus on getting paid for “recruiting” or building a downline of people.</p>
             </div>
 
-            <div class="accordion_head" data-node="#1">4. Software Engineering:<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="accordion_head" data-node="#1">4. What is the best company in MLM to join?<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
             </div>
             <div class="accordion_body hide">
-                <p>Subject to the participation requirements as set out in clause 8 hereof, each Eligible Member��s coverage will not become effective until the coverage has been approved by the Insurance Operator in writing.</p>
+                <p>That really depends on what suits you and the integrity of the company.
+                    We tell people to find a company having products and services that they themselves
+                    are passionate about. The prices should be reasonable so it is a good deal to the retail customer.
+                    If the products are priced well for customers, then the company may be a hit.
+                    You should try to work with a company having a good reputation,
+                    a decent compensation plan and good leadership. We can guide you on
+                    the best company that will suit you. Feel free to Contact us using
+                    the inquiry form or email address given.</p>
+            </div>
+
+            <div class="accordion_head" data-node="#1">5. Is this site or information for my city/country?<div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            </div>
+            <div class="accordion_body hide">
+                <p>Yes. Most MLM's work worldwide. Most of the information we offer
+                    is about companies that can work in all the major countries of the world.
+                    If you have any question or doubt about something listed on our pages or
+                    would like to list with us, feel free to contact us.</p>
             </div>
 
 
@@ -176,7 +209,7 @@ session_start();
 
     <!-- Footer Section Begin -->
 
-    <?php include("footer.php") ?>
+    <?php include("footer2.php") ?>
 
     <!-- Footer Section End -->
 
@@ -189,8 +222,8 @@ session_start();
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main4.js"></script>
-   
+    <script src="js/main5.js"></script>
+
 
 
 

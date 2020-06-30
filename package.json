@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"node-sass sass/style.scss css/style19.css -w",
+    "compile:sass":"node-sass sass/style.scss css/style24.css -w",
     "compile:slick":"node-sass slick/slick-theme.scss slick/slick-theme3.css -w"
   },
   "author": "",

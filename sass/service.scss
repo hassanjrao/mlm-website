@@ -15,7 +15,7 @@
     font-weight: 400;
     font-family: "Cairo", sans-serif;
   }
-  p {
+  p ,a{
     color: $para-color;
     font-size: 16.5px;
     line-height: 23px;
@@ -36,5 +36,9 @@
 
   article{
       margin: 2rem 0;
+  }
+
+  .services-links{
+    padding-bottom: 40px;
   }
 }

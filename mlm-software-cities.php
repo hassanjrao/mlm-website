@@ -1,10 +1,47 @@
-<?php include("database/db.php"); ?>
+<?php include("database/db.php");
+session_start();
+
+$ct = $_GET["city"];
+
+
+if (strpos($ct, "tekirda") !== false) {
+    $ct = "tekirda" . "&#x0011F";
+}
+
+if (!isset($_SESSION[$ct])) {
+
+    $query = $conn->prepare("SELECT * FROM cities_tb");
+    $query->execute();
+    while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+        $cti = preg_replace('/\s+/', '-', $result["city"]);
+        $_SESSION[strtolower($cti)] = $result["id"];
+    }
+}
+
+
+
+$id = $_SESSION[$ct];
+
+
+$query = $conn->prepare("SELECT * FROM cities_tb WHERE id='$id'");
+$query->execute();
+$result = $query->fetch(PDO::FETCH_ASSOC);
+
+$city = ucwords($result["city"]);
+$email = $result["email"];
+$phone = $result["phone"];
+$url = $result["url"];
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="zxx">
 
 
-<body>
+<body onload="getMap()">
 
     <!-- head start -->
 
@@ -13,10 +50,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="text/html">
-        <meta name="keywords" content="mlm, mlm software">
+        <meta name="description" content="mlm software">
+        <meta name="keywords" content=<?php echo "mlm, mlm-software-in-$city" ?>>
 
-        <title>MLM Software</title>
+        <title><?php echo "MLM Software in $city" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -44,12 +81,12 @@
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
 
 
-                        <article class="pb-3">
-                            <span class="text-center">
-                                <h1>MLM Software </h1>
+                        <article class="mt-0 ">
+                            <span>
+                                <h1>MLM Software in <?php echo $city ?></h1><br>
                                 <p>Importance of getting MLM software for lead generation</p>
                             </span>
 
@@ -58,6 +95,17 @@
                             </p>
 
                         </article>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
 
                         <article class="pb-3">
 
@@ -391,3 +439,46 @@
 </body>
 
 </html>
+
+
+<script>
+    function getMap() {
+        var citi = '<?php echo $_GET["city"]; ?>';
+
+        if (citi.includes("tekirda")) {
+            citi = "Tekirdağ"
+        }
+        console.log(citi);
+        $.ajax({
+            url: 'https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s&gen=9&searchtext=' + citi,
+            type: 'GET',
+            data: citi,
+            success: function(result) {
+                console.log(result);
+
+                var longt = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"];
+                var latit = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"];
+
+
+                var platform = new H.service.Platform({
+                    'apikey': 'F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s'
+                });
+
+                // Obtain the default map types from the platform object
+                var maptypes = platform.createDefaultLayers();
+
+                // Instantiate (and display) a map object:
+                var map = new H.Map(
+                    document.getElementById('mapContainer'),
+                    maptypes.vector.normal.map, {
+                        zoom: 10,
+                        center: {
+                            lng: longt,
+                            lat: latit
+                        }
+                    });
+
+            }
+        });
+    }
+</script>

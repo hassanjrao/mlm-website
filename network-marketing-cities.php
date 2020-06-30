@@ -53,10 +53,8 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
         <meta name="description" content="text/html">
-        <meta name="keywords" content=<?php echo "mlm-companies-in,$ct" ?>>
+        <meta name="keywords" content=<?php echo "network-marketing-in-$ct" ?>>
 
         <title><?php echo "Network Marketing in $city" ?></title>
 
@@ -205,12 +203,7 @@ $url = $result["url"];
                                     </li>
                                 </ul>
                             </p>
-                            <p>
-                                Here are the <i style="font-weight: bold;">primary drivers</i> that you need to take into your account:
-                            </p>
-                            <p>
-                                Firstly, Research carefully about the best MLM Company that 'How long has this MLM Organization or MLM Company been?' The risk of failure may be maximized if you choose a company which has been less than two years old, or if you want a company that is over 15 years old, you may miss growth. Look carefully at the supervisors and search about best MLM Company on the internet. Secondly, Find out whether the company is offering goods related to your audience needs or not. Third, Examine preferably, it has easily understandable and reasonable benefits or premium plan or not. Last but not least, examine the nature of training and how much time it provides to train its employees. If you find it stable and strong then move to the next step.
-                            </p>
+
                         </article>
 
                         <article class="pb-3">
@@ -256,6 +249,214 @@ $url = $result["url"];
 
                         </article>
 
+                        <div class="col-lg-12 mb-5">
+
+                            <div class="services-links">
+
+                                <h3 class="text-center mb-4">Network Marketing in</h3>
+
+                                <?php
+                                $ind = 0;
+                                $cts = array();
+                                $ids = array();
+                                $z = 0;
+                                $done_cities = array();
+                                $done_ids = array();
+
+                                $query = $conn->prepare("SELECT * FROM cities_tb");
+                                $query->execute();
+
+                                while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                                    $cities[$ind] = $result["city"];
+                                    $ids[$ind] = $result["id"];
+                                    $ind++;
+                                }
+
+                                $totalCities = count($cities);
+
+                                $n = range(0, $totalCities - 1);
+                                shuffle($n);
+
+
+                                ?>
+
+                                <div class="row">
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+                                            <?php
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $cities[$i];
+                                                $id = $ids[$i];
+
+
+                                                $done_cities[$z] = $city;
+                                                $done_ids[$z] = $id;
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+                                            <?php
+                                            }
+
+
+                                            ?>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+
+                                            <?php }
+                                            // var_dump($done_cities);
+                                            // var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+                                            //  var_dump($done_cities);
+                                            //  var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+                                            //  var_dump($done_cities);
+                                            //  var_dump($done_ids);
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
 
                     </div>
                 </div>
@@ -277,7 +478,7 @@ $url = $result["url"];
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main4.js"></script>
+    <script src="js/main5.js"></script>
 
 
 

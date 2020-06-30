@@ -100,7 +100,7 @@
     $('.slider23').slick({
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         speed: 1000,
         adaptiveHeight: true,
         fade: true,

@@ -14,7 +14,7 @@
             <li class="active"><a href="./index.php">Home</a></li>
             <li><a href="#">MLM</a>
                 <ul class="header__menu__dropdown">
-                    <li><a href="#">MLM</a></li>
+                    <li><a href="mlm.php">MLM</a></li>
                     <li><a href="mlm-companies.php">MLM Companies</a></li>
                     <li><a href="#">MLM Company</a></li>
                     <li><a href="mlm-business.php">MLM Business</a></li>
@@ -32,7 +32,7 @@
                 </ul>
 
             </li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -80,7 +80,7 @@
                         <li><a href="#">MLM</a>
 
                             <ul class="header__menu__dropdown">
-                                <li><a href="#">MLM</a></li>
+                                <li><a href="mlm.php">MLM</a></li>
                                 <li><a href="mlm-companies.php">MLM Companies</a></li>
                                 <li><a href="#">MLM Company</a></li>
                                 <li><a href="mlm-business.php">MLM Business</a></li>
@@ -98,7 +98,7 @@
                             </ul>
 
                         </li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="about.php">About</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#" class="contact-btn">Contact</a></li>
                     </ul>

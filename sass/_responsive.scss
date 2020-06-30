@@ -361,12 +361,18 @@
 
   .footer__copyright {
     text-align: center;
+    padding: 0;
   }
 
-  .footer__copyright__text {
-    float: none;
-    margin-bottom: 25px;
+  .footer__pages{
+    margin: 13px 0;
+    a{
+      display: block;
+    }
   }
+
+
+
 
   
   .footer__widget__social {
@@ -378,10 +384,7 @@
     margin-bottom: 25px;
   }
 
-  .footer__copyright__payment {
-    float: none;
-  }
-
+ 
   .filter__item {
     text-align: center;
   }

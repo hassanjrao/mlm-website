@@ -82,19 +82,20 @@
   }
 }
 
-.footer__copyright {
-  border-top: 1px solid $border;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  overflow: hidden;
-
+.footer__pages{
+  a{
+    line-height: 25px;
+    margin-right: 30px;
+  }
+  
 }
 
-.footer__copyright__text {
-  font-size: 14px;
-  color: $white-color;
-  float: left;
-  line-height: 25px;
+.footer__copyright{
+  padding: 10px 0;
+  a{
+    font-size: 16px;
+    color: $white-color;
+  }
 }
 
 .footer__widget__social {
