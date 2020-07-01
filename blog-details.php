@@ -18,7 +18,7 @@ session_start();
         <meta name="description" content="home">
         <meta name="keywords" content="mlm">
 
-        <title>Home</title>
+        <title>Blog</title>
 
         <?php include("head-links.php"); ?>
 
