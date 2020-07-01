@@ -210,7 +210,7 @@ $url = $result["url"];
 
                             <div class="row">
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
                                         <?php
@@ -243,7 +243,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
 
@@ -288,7 +288,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
 
@@ -334,7 +334,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
                                     <ul>
 
                                         <?php

@@ -44,11 +44,23 @@
                 </ul>
             </li>
 
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Blog</span></a>
+                <ul class="ml-menu">
+                    <li><a href="add_blog.php">Add Blog</a></li>
+                </ul>
+
+                <ul class="ml-menu">
+                    <li><a href="view_blog.php">View Blogs</a></li>
+                </ul>
+            </li>
+
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Footer</span></a>
                 <ul class="ml-menu">
                     <li><a href="footer_on_off.php">ON/OFF</a></li>
                 </ul>
             </li>
+
+
 
 
     </div>

@@ -85,7 +85,7 @@ $url = $result["url"];
                         <article class="pb-3 pt-0">
 
                             <span>
-                                <h1>Direct Marketing </h1><br>
+                                <h1>Direct Marketing in <?php echo $city ?> </h1><br>
                                 <p>(Everything you need to know about it)</p>
                             </span>
 
@@ -225,7 +225,7 @@ $url = $result["url"];
 
                             <div class="row">
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
                                         <?php
@@ -258,7 +258,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
 
@@ -303,7 +303,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
 
                                     <ul>
 
@@ -349,7 +349,7 @@ $url = $result["url"];
 
                                 </div>
 
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6">
                                     <ul>
 
                                         <?php
