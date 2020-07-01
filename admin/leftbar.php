@@ -47,10 +47,7 @@
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Blog</span></a>
                 <ul class="ml-menu">
                     <li><a href="add_blog.php">Add Blog</a></li>
-                </ul>
-
-                <ul class="ml-menu">
-                    <li><a href="view_blog.php">View Blogs</a></li>
+                    <li><a href="all_blog.php">All Blogs</a></li>
                 </ul>
             </li>
 

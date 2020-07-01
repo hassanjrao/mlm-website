@@ -1,49 +1,6 @@
 /*---------------------
   Blog Details Hero
 -----------------------*/
-.blog-details-hero {
-    height: 350px;
-    display: flex;
-    align-items: center;
-}
-
-.blog__details__hero__text {
-    text-align: center;
-
-    h2 {
-        font-size: 46px;
-        color: $white-color;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    ul {
-
-        li {
-            font-size: 16px;
-            color: $white-color;
-            list-style: none;
-            display: inline-block;
-            margin-right: 45px;
-            position: relative;
-
-            &:after {
-                position: absolute;
-                right: -26px;
-                top: 0;
-                content: '|';
-            }
-
-            &:last-child {
-                margin-right: 0;
-
-                &:after {
-                    display: none;
-                }
-            }
-        }
-    }
-}
 
 /*---------------------
   Blog Details
@@ -59,7 +16,7 @@
 
 .blog-details {
     padding-bottom: 75px;
-    border-bottom: 1px solid #e1e1e1;
+ 
 }
 
 .blog__details__text {
@@ -67,6 +24,8 @@
 
     img {
         margin-bottom: 30px;
+        height: 500px;
+        width: 100%;
     }
 
     p {

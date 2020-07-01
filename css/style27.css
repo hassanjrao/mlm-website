@@ -1212,9 +1212,9 @@ ol {
     color: #252525;
     font-weight: 700; }
 
-.product__pagination, .blog__pagination {
+.product__pagination {
   padding-top: 10px; }
-  .product__pagination a, .blog__pagination a {
+  .product__pagination a {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -1230,11 +1230,11 @@ ol {
     -ms-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     transition: all, 0.3s; }
-    .product__pagination a:hover, .blog__pagination a:hover {
+    .product__pagination a:hover {
       background: #7fad39;
       border-color: #7fad39;
       color: #ffffff; }
-    .product__pagination a:last-child, .blog__pagination a:last-child {
+    .product__pagination a:last-child {
       margin-right: 0; }
 
 /*---------------------
@@ -1714,18 +1714,16 @@ ol {
       top: 1px;
       margin-left: 5px; }
 
-.blog__pagination {
-  padding-top: 5px;
-  position: relative; }
-  .blog__pagination:before {
-    position: absolute;
-    left: 0;
-    top: -29px;
-    height: 1px;
-    width: 100%;
-    background: #000000;
-    opacity: .1;
-    content: ''; }
+.pagination li {
+  cursor: pointer; }
+
+.pagination a {
+  color: #7fad39;
+  font-weight: 600; }
+
+.pagination a:hover {
+  color: #7fad39;
+  font-weight: bolder; }
 
 /*---------------------
   Blog Sidebar
@@ -1815,35 +1813,6 @@ ol {
 /*---------------------
   Blog Details Hero
 -----------------------*/
-.blog-details-hero {
-  height: 350px;
-  display: flex;
-  align-items: center; }
-
-.blog__details__hero__text {
-  text-align: center; }
-  .blog__details__hero__text h2 {
-    font-size: 46px;
-    color: #ffffff;
-    font-weight: 700;
-    margin-bottom: 10px; }
-  .blog__details__hero__text ul li {
-    font-size: 16px;
-    color: #ffffff;
-    list-style: none;
-    display: inline-block;
-    margin-right: 45px;
-    position: relative; }
-    .blog__details__hero__text ul li:after {
-      position: absolute;
-      right: -26px;
-      top: 0;
-      content: '|'; }
-    .blog__details__hero__text ul li:last-child {
-      margin-right: 0; }
-      .blog__details__hero__text ul li:last-child:after {
-        display: none; }
-
 /*---------------------
   Blog Details
 -----------------------*/
@@ -1855,13 +1824,14 @@ ol {
   margin-bottom: 70px; }
 
 .blog-details {
-  padding-bottom: 75px;
-  border-bottom: 1px solid #e1e1e1; }
+  padding-bottom: 75px; }
 
 .blog__details__text {
   margin-bottom: 45px; }
   .blog__details__text img {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    height: 500px;
+    width: 100%; }
   .blog__details__text p {
     font-size: 18px;
     line-height: 30px; }

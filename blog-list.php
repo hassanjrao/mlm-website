@@ -55,11 +55,33 @@ session_start();
 
                         <?php
 
+                        if (isset($_GET['page'])) {
+                            $page = $_GET['page'];
+                        } else {
+                            $page = 1;
+                        }
+                        $no_of_records_per_page = 10;
+                        $offset = ($page - 1) * $no_of_records_per_page;
 
-                        $query = $conn->prepare("SELECT * FROM blog_tb");
+
+                        $total_pages_sql = $conn->prepare("SELECT COUNT(*) AS num FROM blog_tb");
+                        $total_pages_sql->execute();
+
+                        $row = $total_pages_sql->fetch(PDO::FETCH_ASSOC);
+
+                        $total_rows=$row["num"];
+
+                      
+                        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+
+
+                        $query = $conn->prepare("SELECT * FROM blog_tb LIMIT $offset, $no_of_records_per_page");
                         $query->execute();
 
                         while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+
+                            $id = $result["id"];
 
                         ?>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -69,15 +91,9 @@ session_start();
                                     </div>
                                     <div class="blog__item__text">
                                         <h5><a href="#"><?php echo $result["title"]; ?></a></h5>
-                                        <p>
-                                            <?php $limit = 33;
-                                            $summary = $result['body'];
-                                            if (strlen($summary) > $limit)
-                                                $summary = substr($summary, 0, strrpos(substr($summary, 0, $limit), ' ')) . '.....';
-                                            echo $summary;
-                                            ?>
-                                        </p>
-                                        <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+
+
+                                        <a href=<?php echo "blog-details.php?blog=$id"  ?> class="blog__btn">READ MORE <span class="arrow_right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -86,13 +102,33 @@ session_start();
                         }
                         ?>
 
-                        <div class="col-lg-12">
-                            <div class="product__pagination blog__pagination">
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#"><i class="fab fa-long-arrow-right"></i></a>
-                            </div>
+                        <div class="col-lg-12 ">
+
+
+                            <ul class="pagination text-center">
+                                <li class="page-item"><a class="page-link" href="<?php if ($page <= 1) {
+                                                                                        echo '#';
+                                                                                    } else {
+                                                                                        echo "blog-list.php?page=" . ($page - 1);
+                                                                                    } ?>">Previous</a></li>
+
+                                <?php
+                                for ($pg = 1; $pg <= $total_pages; $pg++) {
+                                ?>
+                                    <li class="page-item"><a class="page-link" href="blog-list.php?page=<?php echo $pg ?>"><?php echo $pg ?></a></li>
+                                <?php
+                                }
+                                ?>
+
+                                <li class="page-item"><a class="page-link" href="<?php if ($page >= $total_pages) {
+                                                                                        echo '#';
+                                                                                    } else {
+                                                                                        echo "blog-list.php?page=" . ($page + 1);
+                                                                                    } ?>">Next</a></li>
+                            </ul>
+
+
+
                         </div>
 
                     </div>
