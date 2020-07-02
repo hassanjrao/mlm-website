@@ -42,3 +42,17 @@
     padding-bottom: 40px;
   }
 }
+
+.cities-bar{
+  background: $border-1;
+  text-align: center;
+  margin: 40px 0;
+  
+  p{
+    padding: 10px 0;
+  }
+  
+  .sp-md{
+    margin: 0 21%;
+  }
+}

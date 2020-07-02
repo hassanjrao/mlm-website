@@ -81,7 +81,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
 
                         <article class="mt-0 ">
@@ -89,23 +89,15 @@ $url = $result["url"];
                                 <h1>MLM Software in <?php echo $city ?></h1><br>
                                 <p>Importance of getting MLM software for lead generation</p>
                             </span>
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
 
                             <p class="mt-5">
                                 MLM lead generation is a very common challenge faced my many MLM associates and distributors. Lack of enough leads is one of the reasons why only 3% succeed in this business model. The main reason why most are unable to generate sufficient leads is due to lack of proper systems in place. Let’s take a look at some of the challenges associated with MLM and how you will be able to overcome them with the assistance of a MLM software.
                             </p>
 
                         </article>
-                    </div>
 
-                    <div class="col-lg-6">
-
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
 
                         <article class="pb-3">
 
@@ -174,6 +166,10 @@ $url = $result["url"];
 
 
                         </article>
+
+                        <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+                        </div>
+
 
                         <article class="pb-3">
 
@@ -306,8 +302,7 @@ $url = $result["url"];
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -353,8 +348,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "mlm-software-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -398,8 +392,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "mlm-software-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>

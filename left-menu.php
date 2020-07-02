@@ -57,7 +57,7 @@
 
                     ?>
 
-                        <img class="img-flu" src="images/banner/<?php echo $result['image'];  ?>" width="100%">
+                        <img src="images/banner/<?php echo $result['image'];  ?>" width="100%" height="400px">
 
                     <?php } ?>
 

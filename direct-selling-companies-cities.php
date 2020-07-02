@@ -81,13 +81,16 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
 
                         <article class="pt-0">
                             <span>
                                 <h1>Direct selling companies in <?php echo $city ?> </h1>
                             </span>
+
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
 
                             <p class="mt-5">
                                 MLM businesses, or Multi Level Marketing businesses are quite popular among people in today’s world. That’s because these companies deliver a hassle-free method for the interested people to generate a revenue. If you start working with one of the direct selling companies, you will get the opportunity to have your own home based business. On top of that, you can start working from anywhere as well.
@@ -98,18 +101,7 @@ $url = $result["url"];
 
                         </article>
 
-                    </div>
 
-                    <div class="col-lg-6">
-
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
 
                         <article class="pb-3">
                             <h1 style="font-weight:350;">Top 10 MLM Company 2020 list</h1>
@@ -137,6 +129,22 @@ $url = $result["url"];
                                 <p>- Total Life Changes</p>
                                 <p>Total Life Changes is one of the most prominent direct selling companies that you can find in the health and fitness niche. This company was rebranded recently. The product offerings of Total Life Changes can be divided into three main categories. They include Iso café, Skin care and nutrition. Among the products offered by Total Life Changes, the outstanding detox tea made out of herbs has received lots of attention. In addition to that, Total Life Changes is offering many other amazing healthy products. Therefore, direct sellers who work with Total Life Changes have some exciting options to promote with ease.</p>
                             </span>
+
+                            <div class="cities-bar">
+                                <p>
+                                    <span><?php echo "Email:" . $email; ?></span>
+                                    <span class="sp-md"><?php echo "Mob:" . $phone; ?> </span>
+                                    <span><?php echo "URL:" . $url; ?></span>
+
+                                </p>
+                            </div>
+
+
+                            <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+
+                            </div>
+
+
 
                             <span>
                                 <p>- Vasayo</p>
@@ -169,6 +177,15 @@ $url = $result["url"];
                             <p>
                                 Now you have a clear understanding about the best direct selling companies that exist out there. If you are planning to get into a direct selling business or if you are already working for MLM business, but need to make a company change, you can take a look at these 10 options and move forward.
                             </p>
+
+                            <div class="cities-bar">
+                                <p>
+                                    <span><?php echo "Email:" . $email; ?></span>
+                                    <span class="sp-md"><?php echo "Mob:" . $phone; ?> </span>
+                                    <span><?php echo "URL:" . $url; ?></span>
+
+                                </p>
+                            </div>
 
 
                         </article>
@@ -279,8 +296,7 @@ $url = $result["url"];
 
 
                                         <?php }
-                                        // var_dump($done_cities);
-                                        // var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -326,8 +342,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -371,8 +386,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>

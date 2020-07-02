@@ -67,6 +67,7 @@ if (empty($_SESSION['user_id'])) {
 
                                         $result = $query->fetch(PDO::FETCH_ASSOC);
 
+                                     
 
                                         ?>
 
@@ -87,12 +88,12 @@ if (empty($_SESSION['user_id'])) {
                                                 <img src="../images/blog/<?php echo $result['image'];  ?>" width="40px" height="40px">
                                             </div>
 
-                                            <button name="submit" type="submit" style="float: right;" class="btn btn-success btn-sm">Submit</button>
+                                            <button name="submit1" type="submit" style="float: right;" class="btn btn-success btn-sm">Submit</button>
                                         </form>
 
                                         <?php
 
-                                        if (isset($_POST['submit'])) {
+                                        if (isset($_POST['submit1'])) {
 
 
                                             $title = $_POST['title'];
@@ -107,12 +108,15 @@ if (empty($_SESSION['user_id'])) {
                                             move_uploaded_file($_FILES['img']['tmp_name'], $path);
 
 
+                                            $stmt = $conn->prepare("UPDATE `blog_tb` SET title=:title, body=:body, image=:img WHERE id=:id");
 
 
-                                            $stmt = $conn->prepare("UPDATE `blog_tb` SET title='$title',body='$body', image='$img' where id='$id'");
+                                            $stmt->bindParam(':title', $title);
+                                            $stmt->bindParam(':body', $body);
+                                            $stmt->bindParam(':img', $img);
+                                            $stmt->bindParam(':id', $id);
 
                                             $stmt->execute();
-
                                             // header("location:all_blog.php");
                                         }
                                         ?>

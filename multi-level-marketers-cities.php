@@ -81,7 +81,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
                         <article class="pb-3 mt-0">
 
@@ -89,6 +89,9 @@ $url = $result["url"];
                                 <h1>Multi level marketers in <?php echo $city ?></h1>
                                 <p>(Understanding the basics of MLM)</p>
                             </span>
+
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
 
                             <p class="mt-4">
                                 MLM, which is also known as Multi-Level Marketing is a direct sales business model. Inside the business model, you can see how independent representatives are selling services and products obtained from a company to end customers. In the meantime, the representatives have the chance to recruit more representatives under them and provide an appropriate training to start their own businesses. In return, it is possible to receive a commission from the sales made out of them. This is where the multi-level aspect comes into play.
@@ -98,18 +101,11 @@ $url = $result["url"];
                             </p>
 
                         </article>
-                    </div>
 
 
-                    <div class="col-lg-6">
 
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
 
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
+
 
                         <article class="pb-3">
                             <span>
@@ -147,6 +143,11 @@ $url = $result["url"];
                                 <p>Compensation plan clearly outlines the way on how you will be able to make money. </p>
                             </span>
                         </article>
+
+
+                        <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+
+                        </div>
 
                         <article class="pb-3">
                             <h2>Top 100 network marketing companies </h2>
@@ -278,8 +279,7 @@ $url = $result["url"];
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -325,8 +325,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "multi-level-marketers-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -370,8 +369,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "multi-level-marketers-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>

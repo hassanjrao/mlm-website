@@ -26,9 +26,9 @@ session_start();
     <!-- head end -->
 
     <!-- Page Preloder -->
-    <!-- <div id="preloder">
+    <div id="preloder">
         <div class="loader"></div>
-    </div>-->
+    </div>
     <!--Page Preloder -->
 
 
@@ -56,7 +56,7 @@ session_start();
 
 
     <!-- Testimonial Section Begin -->
-    <section class="categories">
+    <section class="categories pb-5">
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
@@ -91,26 +91,13 @@ session_start();
     </section>
     <!-- Testimonial Section End -->
 
-    <!-- Middle Section Begin -->
-    <section class="categories border h-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="pt-5"> Similiar Services</h1>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Middle Section End -->
-
 
     <!-- accordian start -->
 
     <!-- Page Conttent -->
-    <section class="page-content" style="padding:60px 0;">
+    <section class="page-content pb-5 pt-5">
         <div class=" container">
-            <h3 class="text-center mb-4">Expandable FAQ:</h3>
+            <h3 class="text-center mb-4">FAQ:</h3>
 
             <div class="accordion_head" data-node="#1">1. How should we recruit people?
                 <div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
@@ -183,16 +170,14 @@ session_start();
 
     <!-- google map section start -->
 
-    <section class="pb-5">
+    <section class="pb-5 pt-5">
 
         <div class="container">
-            <!-- <img style="width:100%; margin: 30px 0;" src="images\footer.jpg" alt=""> -->
             <div class="row">
 
                 <div class="col-lg-12">
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.6929204689986!2d68.81694891438502!3d27.726766031246626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3935d4af0e0f6721%3A0x6a57455ae708c7b!2sSukkur%20IBA%20University!5e0!3m2!1sen!2s!4v1567797719891!5m2!1sen!2s" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987584510595!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1593705184615!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
                 </div>
 

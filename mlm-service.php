@@ -83,7 +83,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <article class="pb-3">
 
                             <h1>MLM in <?php echo $city ?></h1>
@@ -92,18 +92,7 @@ $url = $result["url"];
 
 
                         </article>
-                    </div>
 
-                    <div class="col-lg-6">
-
-                        <div style="width: 620px; height: 450px" id="mapContainer">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
 
                         <article class="pb-3">
                             <h1>MLM meaning :</h1>
@@ -130,6 +119,11 @@ $url = $result["url"];
                             <p>Though it is legal, MLM still makes people ponder a good while before joining it. The sole reason behind it is that MLM brings untested, and new products into the market for sale. It puts people off from joining it, and they also check if the company is reliable enough or not.</p>
 
                         </article>
+
+
+                        <div style="width: 100%; height: 450px" id="mapContainer">
+                        </div>
+
 
                         <article class="pb-3">
                             <h4>Should I join an MLM?</h4>
@@ -259,8 +253,7 @@ $url = $result["url"];
 
 
                                         <?php }
-                                        // var_dump($done_cities);
-                                        // var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -306,8 +299,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -351,8 +343,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>

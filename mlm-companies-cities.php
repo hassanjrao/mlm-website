@@ -53,7 +53,7 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        
+
         <meta name="description" content="text/html">
         <meta name="keywords" content=<?php echo "mlm-companies-in,$ct" ?>>
 
@@ -85,7 +85,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <article class="mt-0">
 
                             <h1>MLM Companies in <?php echo $city ?></h1>
@@ -96,23 +96,6 @@ $url = $result["url"];
 
                             </p>
 
-
-
-                        </article>
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-
-                        <article>
                             <p>
                                 These MLM companies are credible and have thousands (some millions) of distributors working for them all over the world. They also offer some unique health and wellness products that you can't find in popular retail stores like Walmart, Costco, Walgreen, Amazon, etc. Network marketing is the best way to get rich quickly. So if you're a happy family or just want to make some extra cash to sell the stuff you need. Read this article and learn about the world's leading 10 network marketing companies.
                             </p>
@@ -161,6 +144,10 @@ $url = $result["url"];
                             </p>
                         </article>
 
+                      
+
+
+
                         <article class="pb-3">
                             <h2>MLM business Model Includes:</h2>
                             <h4 class="mt-4">Participants</h4>
@@ -173,6 +160,11 @@ $url = $result["url"];
 
                             <p>There are plenty of new MLM marketing opportunities but here are the ten best MLM companies of 2020:</p>
                         </article>
+
+                          
+                        <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+                        </div>
+
 
                         <article class="pb-3">
                             <h3>Top 10 MLM Companies List</h3>
@@ -351,8 +343,7 @@ $url = $result["url"];
 
 
                                         <?php }
-                                        // var_dump($done_cities);
-                                        // var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -398,8 +389,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>
@@ -443,8 +433,7 @@ $url = $result["url"];
                                             <li><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                         <?php }
-                                        //  var_dump($done_cities);
-                                        //  var_dump($done_ids);
+
                                         ?>
 
                                     </ul>

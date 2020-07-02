@@ -84,7 +84,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
                         <article class="mt-0">
 
@@ -95,22 +95,6 @@ $url = $result["url"];
                             <p class="mt-5">
                                 Are you looking at generating some extra money? Is that why you are interested in joining Network Marketing? Network Marketing can take you, from a struggler to an achiever. Nowadays, it is a growing industry and day after day, an ever-increasing number of network or MLM companies are starting, and more and more people are joining it. The beauty and uniqueness of these Network marketing companies are that any person with a healthy mind can join and succeed in it whether they are young or elderly, skilled or untrained, rich or poor and so in and so forth. </p>
 
-
-                        </article>
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <article>
                             <p>
 
                                 Sounds catchy? Want to find out more about what network marketing or MLM actually is and how it works? And how you can make more money with it?
@@ -205,6 +189,11 @@ $url = $result["url"];
                             </p>
 
                         </article>
+
+                        
+
+                        <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+                        </div>
 
                         <article class="pb-3">
                             <h3>Have a Clear MLM Vision</h3>
@@ -351,8 +340,7 @@ $url = $result["url"];
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -398,8 +386,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>
@@ -443,8 +430,7 @@ $url = $result["url"];
                                                 <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+
                                             ?>
 
                                         </ul>

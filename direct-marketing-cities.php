@@ -80,7 +80,7 @@ $url = $result["url"];
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
                         <article class="pb-3 pt-0">
 
@@ -88,6 +88,9 @@ $url = $result["url"];
                                 <h1>Direct Marketing in <?php echo $city ?> </h1><br>
                                 <p>(Everything you need to know about it)</p>
                             </span>
+
+                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
 
                             <p class="mt-4">
                                 A large number of home based business opportunities are available for the people to consider. Out of those business opportunities, direct marketing has received lots of positive attention in the recent past. Hence, it is worthy to take a look at this business opportunity and figure out what comes along with it. Then you can go ahead and experience the benefits that come out of it as well.
@@ -105,18 +108,8 @@ $url = $result["url"];
 
 
                         </article>
-                    </div>
 
-                    <div class="col-lg-6">
 
-                        <div class="pb-3" style="width: 620px; height: 450px" id="mapContainer">
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
 
                         <article class="pb-3">
 
@@ -163,6 +156,21 @@ $url = $result["url"];
                             </span>
                         </article>
 
+                        
+                        <div class="cities-bar">
+                            <p>
+                                <span><?php echo "Email:". $email; ?></span>
+                                <span class="sp-md"><?php echo "Mob:". $phone;?> </span>
+                                 <span><?php echo "URL:". $url; ?></span>
+                            
+                            </p>
+                        </div>
+
+
+                        <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
+
+                        </div>
+
                         <article class="pb-3">
                             <span>
                                 <h2>Matrix Plan</h2>
@@ -188,6 +196,16 @@ $url = $result["url"];
                         </article>
 
 
+                        <div class="cities-bar">
+                            <p>
+                                <span><?php echo "Email:". $email; ?></span>
+                                <span class="sp-md"><?php echo "Mob:". $phone;?> </span>
+                                 <span><?php echo "URL:". $url; ?></span>
+                            
+                            </p>
+
+
+                        </div>
 
                     </div>
 
