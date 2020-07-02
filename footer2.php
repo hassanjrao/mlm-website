@@ -136,8 +136,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                         <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                     <?php }
-                                    //  var_dump($done_cities);
-                                    //  var_dump($done_ids);
+                                    
                                     ?>
 
                                 </ul>
@@ -190,8 +189,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
                                         <li><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                     <?php }
-                                    //  var_dump($done_cities);
-                                    //  var_dump($done_ids);
+                                   
                                     ?>
 
                                 </ul>
@@ -330,8 +328,8 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
         <div class="row footer__copyright">
 
             <div class="col-lg-4 col-md-4 my-auto">
-                <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
-                    <!--<img src="img/logo.png" alt="">--></a>
+                <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">Logo
+                    <!-- <img src="images/logo.png" alt=""></a> -->
             </div>
 
             <div class="col-lg-4 col-md-4 text-center my-auto">

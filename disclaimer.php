@@ -44,6 +44,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+
+            <h3>Disclaimer</h3><br>
                 <article>
                     <p>
                         DSA Web Site Agreement

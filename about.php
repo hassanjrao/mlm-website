@@ -45,6 +45,8 @@
         <div class="row">
             <div class="col-lg-12">
 
+                <h3>About us</h3> <br>
+
                 <article>
                     <p>
                         Welcome to DSA, your number one source for all information about MLM in your city.
