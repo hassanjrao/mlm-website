@@ -226,7 +226,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 
                                     ?>
-                                        <li class="ml-2"><a href="#"><?php echo ucwords($city) ?></a></li>
+                                        <li class=""><a href="#"><?php echo ucwords($city) ?></a></li>
 
 
                                     <?php }
@@ -319,8 +319,8 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
         <div class="row footer__copyright">
 
             <div class="col-lg-4 col-md-4 my-auto">
-                <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">Logo
-                    <!-- <img src="images/logo.png" alt=""></a> -->
+                <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
+                    <img src="images/logo.png" alt="logo" width="50px" height="50px"></a>
             </div>
 
             <div class="col-lg-4 col-md-4 text-center my-auto">

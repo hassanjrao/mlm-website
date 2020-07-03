@@ -13,8 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="text/html">
-        <meta name="keywords" content="mlm, mlm software">
+        <meta name="description" content="MLM Software">
+        <meta name="keywords" content="MLM Software">
 
         <title>MLM Software</title>
 
@@ -258,8 +258,7 @@
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>
@@ -305,8 +304,7 @@
                                                 <li><a href=<?php echo "mlm-software-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>
@@ -350,8 +348,7 @@
                                                 <li><a href=<?php echo "mlm-software-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>

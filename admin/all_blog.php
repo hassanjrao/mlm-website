@@ -61,6 +61,7 @@ if (empty($_SESSION['user_id'])) {
                                                         <th data-breakpoints="xs">ID</th>
                                                         <th data-breakpoints="xs">Title</th>
                                                         <th data-breakpoints="xs">Body</th>
+                                                        <th data-breakpoints="xs">Caption</th>
                                                         <th data-breakpoints="xs">Image</th>
                                                         <th data-breakpoints="xs sm md">Edit/Delete</th>
 
@@ -90,6 +91,9 @@ if (empty($_SESSION['user_id'])) {
                                                             </td>
                                                             <td>
                                                                 <p class="c_name"> <?php echo $result['body'] ?></p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="c_name"> <?php echo $result['caption'] ?></p>
                                                             </td>
                                                             <td>
                                                                 <img src="../images/blog/<?php echo $result['image'];  ?>" width="200px" height="100px">

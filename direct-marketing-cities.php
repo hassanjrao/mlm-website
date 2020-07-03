@@ -49,8 +49,8 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="direct marketing">
-        <meta name="keywords" content=<?php echo "direct-marketing-in-$city" ?>>
+        <meta name="description" content=<?php echo "Direct marketing in " . $city; ?>>
+        <meta name="keywords" content=<?php echo "direct marketing," . strtolower($city); ?>>
 
         <title><?php echo "Direct Marketing in $city" ?></title>
 
@@ -89,7 +89,31 @@ $url = $result["url"];
                                 <p>(Everything you need to know about it)</p>
                             </span>
 
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
+
+                            <div class="cities-tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="#info" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">More Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#email" data-toggle="tab" href="#email" role="tab" aria-controls="email" aria-selected="false">Email</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#phone" data-toggle="tab" href="#phone" role="tab" aria-controls="phone" aria-selected="false">Phone</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#web" data-toggle="tab" href="#web" role="tab" aria-controls="web" aria-selected="false">Website</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">Lorem Ipsum</div>
+                                    <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email"><?php echo $email; ?></div>
+                                    <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone"><?php echo $phone; ?></div>
+                                    <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web"><?php echo $url; ?></div>
+                                </div>
+                            </div>
+
+
 
 
                             <p class="mt-4">
@@ -156,14 +180,28 @@ $url = $result["url"];
                             </span>
                         </article>
 
-                        
-                        <div class="cities-bar">
-                            <p>
-                                <span><?php echo "Email:". $email; ?></span>
-                                <span class="sp-md"><?php echo "Mob:". $phone;?> </span>
-                                 <span><?php echo "URL:". $url; ?></span>
-                            
-                            </p>
+
+                        <div class="cities-tabs">
+                            <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="#info1" data-toggle="tab" href="#info1" role="tab" aria-controls="info1" aria-selected="true">More Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#email1" data-toggle="tab" href="#email1" role="tab" aria-controls="email1" aria-selected="false">Email</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#phone1" data-toggle="tab" href="#phone1" role="tab" aria-controls="phone1" aria-selected="false">Phone</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#web1" data-toggle="tab" href="#web1" role="tab" aria-controls="web1" aria-selected="false">Website</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent1">
+                                <div class="tab-pane fade show active" id="info1" role="tabpanel" aria-labelledby="info1">Lorem Ipsum</div>
+                                <div class="tab-pane fade" id="email1" role="tabpanel" aria-labelledby="email1"><?php echo $email; ?></div>
+                                <div class="tab-pane fade" id="phone1" role="tabpanel" aria-labelledby="phone1"><?php echo $phone; ?></div>
+                                <div class="tab-pane fade" id="web1" role="tabpanel" aria-labelledby="web1"><?php echo $url; ?></div>
+                            </div>
                         </div>
 
 
@@ -196,15 +234,27 @@ $url = $result["url"];
                         </article>
 
 
-                        <div class="cities-bar">
-                            <p>
-                                <span><?php echo "Email:". $email; ?></span>
-                                <span class="sp-md"><?php echo "Mob:". $phone;?> </span>
-                                 <span><?php echo "URL:". $url; ?></span>
-                            
-                            </p>
-
-
+                        <div class="cities-tabs">
+                            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="#info2" data-toggle="tab" href="#info2" role="tab" aria-controls="info2" aria-selected="true">More Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#email2" data-toggle="tab" href="#email2" role="tab" aria-controls="email2" aria-selected="false">Email</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#phone2" data-toggle="tab" href="#phone2" role="tab" aria-controls="phone2" aria-selected="false">Phone</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#web2" data-toggle="tab" href="#web2" role="tab" aria-controls="web2" aria-selected="false">Website</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent2">
+                                <div class="tab-pane fade show active" id="info2" role="tabpanel" aria-labelledby="info2">Lorem Ipsum</div>
+                                <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2"><?php echo $email; ?></div>
+                                <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2"><?php echo $phone; ?></div>
+                                <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2"><?php echo $url; ?></div>
+                            </div>
                         </div>
 
                     </div>

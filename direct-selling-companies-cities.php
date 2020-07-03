@@ -50,8 +50,8 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="text/html">
-        <meta name="keywords" content=<?php echo "direct-selling-companies-in $city" ?>>
+        <meta name="description" content=<?php echo "Direct selling companies in " . $city ?>>
+        <meta name="keywords" content=<?php echo "Direct selling companies," . strtolower($city); ?>>
 
         <title><?php echo "Direct Selling Companies in $city" ?></title>
 
@@ -89,8 +89,29 @@ $url = $result["url"];
                                 <h1>Direct selling companies in <?php echo $city ?> </h1>
                             </span>
 
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
 
+                            <div class="cities-tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="#info" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">More Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#email" data-toggle="tab" href="#email" role="tab" aria-controls="email" aria-selected="false">Email</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#phone" data-toggle="tab" href="#phone" role="tab" aria-controls="phone" aria-selected="false">Phone</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#web" data-toggle="tab" href="#web" role="tab" aria-controls="web" aria-selected="false">Website</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">Lorem Ipsum</div>
+                                    <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email"><?php echo $email; ?></div>
+                                    <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone"><?php echo $phone; ?></div>
+                                    <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web"><?php echo $url; ?></div>
+                                </div>
+                            </div>
 
                             <p class="mt-5">
                                 MLM businesses, or Multi Level Marketing businesses are quite popular among people in today’s world. That’s because these companies deliver a hassle-free method for the interested people to generate a revenue. If you start working with one of the direct selling companies, you will get the opportunity to have your own home based business. On top of that, you can start working from anywhere as well.
@@ -130,13 +151,28 @@ $url = $result["url"];
                                 <p>Total Life Changes is one of the most prominent direct selling companies that you can find in the health and fitness niche. This company was rebranded recently. The product offerings of Total Life Changes can be divided into three main categories. They include Iso café, Skin care and nutrition. Among the products offered by Total Life Changes, the outstanding detox tea made out of herbs has received lots of attention. In addition to that, Total Life Changes is offering many other amazing healthy products. Therefore, direct sellers who work with Total Life Changes have some exciting options to promote with ease.</p>
                             </span>
 
-                            <div class="cities-bar">
-                                <p>
-                                    <span><?php echo "Email:" . $email; ?></span>
-                                    <span class="sp-md"><?php echo "Mob:" . $phone; ?> </span>
-                                    <span><?php echo "URL:" . $url; ?></span>
 
-                                </p>
+                            <div class="cities-tabs">
+                                <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="#info1" data-toggle="tab" href="#info1" role="tab" aria-controls="info1" aria-selected="true">More Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#email1" data-toggle="tab" href="#email1" role="tab" aria-controls="email1" aria-selected="false">Email</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#phone1" data-toggle="tab" href="#phone1" role="tab" aria-controls="phone1" aria-selected="false">Phone</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="#web1" data-toggle="tab" href="#web1" role="tab" aria-controls="web1" aria-selected="false">Website</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent1">
+                                    <div class="tab-pane fade show active" id="info1" role="tabpanel" aria-labelledby="info1">Lorem Ipsum</div>
+                                    <div class="tab-pane fade" id="email1" role="tabpanel" aria-labelledby="email1"><?php echo $email; ?></div>
+                                    <div class="tab-pane fade" id="phone1" role="tabpanel" aria-labelledby="phone1"><?php echo $phone; ?></div>
+                                    <div class="tab-pane fade" id="web1" role="tabpanel" aria-labelledby="web1"><?php echo $url; ?></div>
+                                </div>
                             </div>
 
 
@@ -178,21 +214,35 @@ $url = $result["url"];
                                 Now you have a clear understanding about the best direct selling companies that exist out there. If you are planning to get into a direct selling business or if you are already working for MLM business, but need to make a company change, you can take a look at these 10 options and move forward.
                             </p>
 
-                            <div class="cities-bar">
-                                <p>
-                                    <span><?php echo "Email:" . $email; ?></span>
-                                    <span class="sp-md"><?php echo "Mob:" . $phone; ?> </span>
-                                    <span><?php echo "URL:" . $url; ?></span>
-
-                                </p>
-                            </div>
-
 
                         </article>
 
+                        <div class="cities-tabs">
+                            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="#info2" data-toggle="tab" href="#info2" role="tab" aria-controls="info2" aria-selected="true">More Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#email2" data-toggle="tab" href="#email2" role="tab" aria-controls="email2" aria-selected="false">Email</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#phone2" data-toggle="tab" href="#phone2" role="tab" aria-controls="phone2" aria-selected="false">Phone</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="#web2" data-toggle="tab" href="#web2" role="tab" aria-controls="web2" aria-selected="false">Website</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent2">
+                                <div class="tab-pane fade show active" id="info2" role="tabpanel" aria-labelledby="info2">Lorem Ipsum</div>
+                                <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2"><?php echo $email; ?></div>
+                                <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2"><?php echo $phone; ?></div>
+                                <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2"><?php echo $url; ?></div>
+                            </div>
+                        </div>
 
 
-                    </div>
+
+                    </div1>
 
                     <div class="col-lg-12 mb-5">
 

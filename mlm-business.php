@@ -17,8 +17,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="mlm business">
-        <meta name="keywords" content="mlm, mlm business">
+        <meta name="description" content="MLM business">
+        <meta name="keywords" content="MLM business">
 
         <title>MLM Business</title>
 
@@ -238,8 +238,7 @@
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>
@@ -285,8 +284,7 @@
                                                 <li><a href=<?php echo "mlm-business-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>
@@ -330,8 +328,7 @@
                                                 <li><a href=<?php echo "mlm-business-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>

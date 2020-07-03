@@ -16,7 +16,7 @@
 
         <meta name="description" content="home">
         <meta name="keywords" content="mlm">
-        <meta name="description" content="text/html">
+        <meta name="description" content="mlm">
         <meta name="keywords" content=<?php echo "mlm" ?>>
 
         <title><?php echo "MLM" ?></title>
@@ -203,8 +203,7 @@
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>
@@ -250,8 +249,7 @@
                                                 <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>
@@ -295,8 +293,7 @@
                                                 <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                          
                                             ?>
 
                                         </ul>

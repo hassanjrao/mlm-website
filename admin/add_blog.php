@@ -66,7 +66,8 @@ if (empty($_SESSION['user_id'])) {
 
 
                                             $title = $_POST["title"];
-                                            $body=$_POST["body__"];
+                                            $body = $_POST["body__"];
+                                            $caption = $_POST["caption"];
                                             $folder = "../images/blog/";
                                             $img = $_FILES['img']['name'];
                                             $path = $folder . $img;
@@ -74,11 +75,12 @@ if (empty($_SESSION['user_id'])) {
                                             move_uploaded_file($_FILES['img']['tmp_name'], $path);
 
 
-                                            $stmt = $conn->prepare("INSERT INTO `blog_tb`( `title`,`body`,`image`) VALUES (:title,:body,:image)");
+                                            $stmt = $conn->prepare("INSERT INTO `blog_tb`( `title`,`body`,`caption`,`image`) VALUES (:title,:body,:caption,:image)");
 
 
                                             $stmt->bindParam(':title', $title);
                                             $stmt->bindParam(':body', $body);
+                                            $stmt->bindParam(':caption', $caption);
                                             $stmt->bindParam(':image', $img);
 
                                             if ($stmt->execute()) {
@@ -106,7 +108,11 @@ if (empty($_SESSION['user_id'])) {
                                             </div>
 
                                             <div class="form-group">
-                                                <textarea rows="15" name="body__" class="form-control" placeholder="Body" ></textarea>
+                                                <textarea rows="15" name="body__" class="form-control" placeholder="Body"></textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" name="caption" class="form-control" placeholder="Caption" required="" />
                                             </div>
 
                                             <div class="form-group">

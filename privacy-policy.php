@@ -13,8 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="text/html">
-        <meta name="keywords" content="privacy-policy">
+        <meta name="description" content="privacy-policy">
+        <meta name="keywords" content="privacy policy">
 
         <title>Privacy Policy</title>
 

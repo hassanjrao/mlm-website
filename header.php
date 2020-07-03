@@ -5,8 +5,8 @@
 
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
-            <!--<img src="img/logo.png" alt="">--></a>
+        <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
+            <img src="images/logo.png" alt="logo"></a>
     </div>
 
     <nav class="humberger__menu__nav mobile-menu">
@@ -65,8 +65,8 @@
 
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;"> LOGO
-                        <!--<img src="img/logo.png" alt="">--></a>
+                    <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
+                        <img src="images/logo.png" alt="logo" width="50px" height="50px"></a>
                 </div>
             </div>
 

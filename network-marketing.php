@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="html/text">
+        <meta name="description" content="Network Marketing">
         <meta name="keywords" content="network marketing">
 
         <title>Network Marketing</title>
@@ -299,8 +299,7 @@
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>
@@ -346,8 +345,7 @@
                                                 <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>
@@ -391,8 +389,7 @@
                                                 <li><a href=<?php echo "network-marketing-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                            
                                             ?>
 
                                         </ul>

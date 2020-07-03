@@ -10,3 +10,4 @@ RewriteRule ^direct-marketing-in-([0-9a-zA-Z-.]+)  direct-marketing-cities.php?c
 RewriteRule ^direct-selling-companies-in-([0-9a-zA-Z-.]+)  direct-selling-companies-cities.php?city=$1 [NC,L]
 
 
+

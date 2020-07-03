@@ -26,9 +26,9 @@ session_start();
     <!-- head end -->
 
     <!-- Page Preloder -->
-    <!-- <div id="preloder">
+    <div id="preloder">
         <div class="loader"></div>
-    </div>-->
+    </div>
     <!--Page Preloder -->
 
 
@@ -43,7 +43,7 @@ session_start();
 
 
 
-   
+
 
     <!-- Blog Details Section Begin -->
     <section class="blog-details spad">
@@ -53,29 +53,31 @@ session_start();
                 <div class="col-lg-12 col-md-12 order-md-1 order-1">
 
                     <?php
-                    $id=$_GET["blog"];
+
+
+                    $id = $_GET["id"];
                     $query = $conn->prepare("SELECT * FROM blog_tb where id='$id'");
                     $query->execute();
 
                     $result = $query->fetch(PDO::FETCH_ASSOC);
 
-                    $title=$result["title"];
-                    $body=$result["body"];
-                    $image=$result["image"];
+                    $title = $result["title"];
+                    $body = $result["body"];
+                    $image = $result["image"];
 
-                    
+
                     ?>
 
                     <div class="blog__details__text">
 
                         <img src="images/blog/<?php echo $image; ?>" alt="Blog Image">
                         <h2><?php echo $title; ?></h2>
-                        
+
                         <?php echo $body ?>
 
                     </div>
 
-                    
+
 
                 </div>
             </div>
@@ -85,7 +87,7 @@ session_start();
 
     <!-- Related Blog Section Begin -->
     <section class="relaog">
-        
+
     </section>
     <!-- Related Blog Section End -->
 

@@ -34,11 +34,11 @@ if (empty($_SESSION['user_id'])) {
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-6 col-sm-12">
-                        <h2>Add Blog</h2>
+                        <h2>Edit Blog</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php"><i class="zmdi zmdi-home"></i> Courses</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Blog</a></li>
-                            <li class="breadcrumb-item active">Add Blog</li>
+                            <li class="breadcrumb-item active">Edit Blog</li>
                         </ul>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12">
@@ -84,6 +84,10 @@ if (empty($_SESSION['user_id'])) {
                                             </div>
 
                                             <div class="form-group">
+                                                <input type="text" name="caption" class="form-control" placeholder="Caption" required="" value="<?php echo $result['caption']; ?>" />
+                                            </div>
+
+                                            <div class="form-group">
                                                 <input type="file" name="img" class="form-control" placeholder="Password" required="" />
                                                 <img src="../images/blog/<?php echo $result['image'];  ?>" width="40px" height="40px">
                                             </div>
@@ -98,9 +102,9 @@ if (empty($_SESSION['user_id'])) {
 
                                             $title = $_POST['title'];
                                             $body = $_POST['body__'];
+                                            $caption = $_POST['caption'];
 
-                                            var_dump($body);
-
+                                         
                                             $folder = "../images/blog/";
                                             $img = $_FILES['img']['name'];
                                             $path = $folder . $img;
@@ -108,16 +112,17 @@ if (empty($_SESSION['user_id'])) {
                                             move_uploaded_file($_FILES['img']['tmp_name'], $path);
 
 
-                                            $stmt = $conn->prepare("UPDATE `blog_tb` SET title=:title, body=:body, image=:img WHERE id=:id");
+                                            $stmt = $conn->prepare("UPDATE `blog_tb` SET title=:title, body=:body, caption=:caption ,image=:img WHERE id=:id");
 
 
                                             $stmt->bindParam(':title', $title);
                                             $stmt->bindParam(':body', $body);
+                                            $stmt->bindParam(':caption', $caption);
                                             $stmt->bindParam(':img', $img);
                                             $stmt->bindParam(':id', $id);
 
                                             $stmt->execute();
-                                            // header("location:all_blog.php");
+                                            header("location:all_blog.php");
                                         }
                                         ?>
 

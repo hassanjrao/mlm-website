@@ -1,10 +1,8 @@
 .service {
   h1 {
     font-size: 55px;
-    
   }
 
- 
   h1,
   h2,
   h3,
@@ -15,7 +13,8 @@
     font-weight: 400;
     font-family: "Cairo", sans-serif;
   }
-  p ,a{
+  p,
+  a {
     color: $para-color;
     font-size: 16.5px;
     line-height: 23px;
@@ -34,25 +33,40 @@
     }
   }
 
-  article{
-      margin: 2rem 0;
+  article {
+    margin: 2rem 0;
   }
 
-  .services-links{
+  .services-links {
     padding-bottom: 40px;
+  }
+  .cities-tabs {
+    margin: 45px 0;
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    .tab-pane {
+      padding-top: 15px;
+    }
   }
 }
 
-.cities-bar{
+.cities-bar {
   background: $border-1;
   text-align: center;
   margin: 40px 0;
-  
-  p{
+
+  p {
     padding: 10px 0;
   }
-  
-  .sp-md{
+
+  .sp-md {
     margin: 0 21%;
   }
 }

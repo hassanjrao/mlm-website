@@ -17,8 +17,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="mlm,mlm-companies">
-        <meta name="keywords" content="mlm,mlm-companies,companies">
+        <meta name="description" content="MLM companies">
+        <meta name="keywords" content="MLM companies">
 
         <title>MLM Companies</title>
 
@@ -193,7 +193,7 @@
 
                             <div class="services-links">
 
-                                <h3 class="text-center mb-4">MLM Services in</h3>
+                                <h3 class="text-center mb-4">MLM Companies in</h3>
 
                                 <?php
                                 $ind = 0;
@@ -291,8 +291,7 @@
 
 
                                             <?php }
-                                            // var_dump($done_cities);
-                                            // var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>
@@ -338,8 +337,7 @@
                                                 <li><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                          
                                             ?>
 
                                         </ul>
@@ -383,8 +381,7 @@
                                                 <li><a href=<?php echo "mlm-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
 
                                             <?php }
-                                            //  var_dump($done_cities);
-                                            //  var_dump($done_ids);
+                                           
                                             ?>
 
                                         </ul>

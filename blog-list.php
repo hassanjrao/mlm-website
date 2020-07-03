@@ -26,9 +26,9 @@ session_start();
     <!-- head end -->
 
     <!-- Page Preloder -->
-    <!-- <div id="preloder">
+    <div id="preloder">
         <div class="loader"></div>
-    </div>-->
+    </div>
     <!--Page Preloder -->
 
 
@@ -69,9 +69,9 @@ session_start();
 
                         $row = $total_pages_sql->fetch(PDO::FETCH_ASSOC);
 
-                        $total_rows=$row["num"];
+                        $total_rows = $row["num"];
 
-                      
+
                         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
 
@@ -82,6 +82,10 @@ session_start();
                         while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
 
                             $id = $result["id"];
+                            $tit = $result["title"];
+
+                            $title = preg_replace('/\s+/', '-', $tit);
+
 
                         ?>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -92,8 +96,16 @@ session_start();
                                     <div class="blog__item__text">
                                         <h5><a href="#"><?php echo $result["title"]; ?></a></h5>
 
+                                        <?php $limit = 180;
+                                        $summary = $result['caption'];
+                                        if (strlen($summary) > $limit)
+                                            $summary = substr($summary, 0, $limit) . '.....';
 
-                                        <a href=<?php echo "blog-details.php?blog=$id"  ?> class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                        ?>
+
+                                        <p><?php echo $summary ?></p>
+
+                                        <a href="blog-details.php?<?php echo "blog=" . $title . "&id=" . $id  ?>" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
                                     </div>
                                 </div>
                             </div>
