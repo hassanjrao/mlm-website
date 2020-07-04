@@ -20,7 +20,7 @@ if (empty($_COOKIE['remember_me'])) {
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>:: Aero Bootstrap4 Admin :: Sign In</title>
+    <title>Admin</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Custom Css -->
@@ -39,32 +39,21 @@ if (empty($_COOKIE['remember_me'])) {
                             <img class="logo" src="assets/images/logo.svg" alt="">
                             <h5>Update</h5>
                         </div>
+
                         <?php
 
-                        $id = $_GET['id'];
-
-                        $query = $conn->prepare("SELECT * FROM cities_tb where id='$id'");
-                        $query->execute();
-
-                        $result = $query->fetch(PDO::FETCH_ASSOC);
-
-
+                      
                         ?>
 
+                        
                         <div class="body">
                             <div class="input-group mb-3">
-                                <input type="text" name="name" class="form-control" placeholder="City Name" value="<?php echo $result['city']; ?>" />
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="email" class="form-control" placeholder="City Name" value="<?php echo $result['email']; ?>" />
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="phone" class="form-control" placeholder="City Name" value="<?php echo $result['phone']; ?>" />
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="url" class="form-control" placeholder="City Name" value="<?php echo $result['url']; ?>" />
+                                <input type="password" name="c-pswrd" class="form-control" placeholder="Current Password" required=""/>
                             </div>
 
+                            <div class="input-group mb-3">
+                                <input type="password" name="n-pswrd" class="form-control" placeholder="New Password" required=""/>
+                            </div>
 
                             <input type="submit" name="submit" class="btn btn-primary btn-block waves-effect waves-light" value="Update">
 
@@ -76,19 +65,53 @@ if (empty($_COOKIE['remember_me'])) {
                     if (isset($_POST['submit'])) {
 
 
-                        $city = $_POST['name'];
-                        $email = $_POST['email'];
-                        $phone = $_POST['phone'];
-                        $url = $_POST['url'];
+                        $id=$_GET["id"];
+                        $c_pswrd = $_POST['c-pswrd'];
+                        $n_pswrd = $_POST['n-pswrd'];
+
+
+                        $query = $conn->prepare("SELECT * FROM admin_login where id='$id'");
+                        $query->execute();
+
+                        $result = $query->fetch(PDO::FETCH_ASSOC);
+
+                        if ($result["password"] == $c_pswrd) {
+
+                            $stmt = $conn->prepare("UPDATE `admin_login` SET password='$n_pswrd'");
+
+                            $stmt->execute();
+
+                    ?>
+
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <strong>Success!</strong> Password Updated
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button><br>
+                                <a href="index.php">Go Back to Dashboard</a>
+                            </div>
 
 
 
 
-                        $stmt = $conn->prepare("UPDATE `cities_tb` SET city='$city', email='$email', phone='$phone', url='$url' where id='$id'");
 
-                        $stmt->execute();
+                        <?php
 
-                        header("location:all_city.php");
+
+                        } else {
+                        ?>
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <strong>Fail!</strong> Incorrect Current Password
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+<br>
+                                <a href="index.php">Go Back to Dashboard</a>
+                            </div>
+
+                    <?php
+
+                        }
                     }
 
                     ?>

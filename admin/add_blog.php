@@ -2,10 +2,14 @@
 include('../database/db.php');
 ob_start();
 session_start();
-if (empty($_SESSION['user_id'])) {
 
-    header('location:sign-in.php');
+if (empty($_COOKIE['remember_me'])) {
+    if (empty($_SESSION['user_id'])) {
+
+        header('location:sign-in.php');
+    }
 }
+
 ?>
 
 
@@ -26,6 +30,10 @@ if (empty($_SESSION['user_id'])) {
 
     <!-- Left Sidebar -->
     <?php include("leftbar.php") ?>
+
+    <!-- Right Sidebar -->
+    <?php include("rightbar.php")?>
+
 
 
 

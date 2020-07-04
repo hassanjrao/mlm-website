@@ -235,6 +235,9 @@ $url = $result["url"];
                                 <div class="tab-pane fade" id="web1" role="tabpanel" aria-labelledby="web1"><?php echo $url; ?></div>
                             </div>
                         </div>
+
+                        <h2 class="pb-3 text-center">Find us in: </h2>
+
                         <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
                         </div>
 

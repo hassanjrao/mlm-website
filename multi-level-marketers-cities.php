@@ -188,6 +188,8 @@ $url = $result["url"];
                         </div>
 
 
+                        <h2 class="pb-3 text-center">Find us in: </h2>
+
                         <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
 
                         </div>

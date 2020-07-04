@@ -61,6 +61,12 @@ $url = $result["url"];
 
         <?php include("head-links.php") ?>
 
+        <script type="text/javascript">
+            window._mNHandle = window._mNHandle || {};
+            window._mNHandle.queue = window._mNHandle.queue || [];
+            medianet_versionId = "3121199";
+        </script>
+        <script src="https://contextual.media.net/dmedianet.js?cid=8CUP1B0G1" async="async"></script>
     </head>
     <!-- head end -->
 
@@ -107,7 +113,17 @@ $url = $result["url"];
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">Lorem Ipsum</div>
+                                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
+                                        <div id="403953953">
+                                            <script type="text/javascript">
+                                                try {
+                                                    window._mNHandle.queue.push(function() {
+                                                        window._mNDetails.loadTag("403953953", "728x90", "403953953");
+                                                    });
+                                                } catch (error) {}
+                                            </script>
+                                        </div>
+                                    </div>
                                     <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email"><?php echo $email; ?></div>
                                     <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone"><?php echo $phone; ?></div>
                                     <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web"><?php echo $url; ?></div>
@@ -207,6 +223,8 @@ $url = $result["url"];
                                 <div class="tab-pane fade" id="web1" role="tabpanel" aria-labelledby="web1"><?php echo $url; ?></div>
                             </div>
                         </div>
+
+                        <h2 class="pb-3 text-center">Find us in: </h2>
 
                         <div class="pb-3" style="width: 100%; height: 450px" id="mapContainer">
                         </div>

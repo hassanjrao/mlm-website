@@ -59,6 +59,14 @@ $url = $result["url"];
 
         <?php include("head-links.php") ?>
 
+        <script type="text/javascript">
+            var infolinks_pid = 3271549;
+            var infolinks_wsid = 0;
+        </script>
+        <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+
+
+
     </head>
     <!-- head end -->
 
@@ -165,6 +173,7 @@ $url = $result["url"];
                             </div>
                         </div>
 
+                        <h2 class="pb-3 text-center">Find us in: </h2>
 
                         <div style="width: 100%; height: 450px" id="mapContainer">
                         </div>
@@ -189,7 +198,6 @@ $url = $result["url"];
 
                         <article class="mb-5">
                             <p class="mt-4">MLM techniques have been quite effective in the business world for long now. One can easily choose the process of MLM and let recruiters recruit more recruiters. It's almost like handing out a little part of your business to people below you. This sense of responsibility makes everyone work their best and generate mega sales in little time!</p>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
 
                         </article>
 

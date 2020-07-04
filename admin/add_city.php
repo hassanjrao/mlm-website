@@ -2,9 +2,12 @@
 include('../database/db.php');
 ob_start();
 session_start();
-if (empty($_SESSION['user_id'])) {
 
-    header('location:sign-in.php');
+if (empty($_COOKIE['remember_me'])) {
+    if (empty($_SESSION['user_id'])) {
+
+        header('location:sign-in.php');
+    }
 }
 ?>
 
@@ -24,9 +27,13 @@ if (empty($_SESSION['user_id'])) {
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
 
-   
+
     <!-- Left Sidebar -->
     <?php include("leftbar.php") ?>
+
+    <!-- Right Sidebar -->
+    <?php include("rightbar.php")?>
+
 
 
 
