@@ -18,8 +18,7 @@
 
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
-  .blog{
+  .blog {
     margin-top: 40px;
   }
 
@@ -29,7 +28,6 @@
     }
     input {
       width: 104%;
-      
     }
     textarea {
       width: 104%;
@@ -57,13 +55,11 @@
 
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
   .footer__about {
     form {
       width: 100%;
     }
   }
-
 
   .enquiry-btn {
     left: 95.3%;
@@ -364,17 +360,14 @@
     padding: 0;
   }
 
-  .footer__pages{
+  .footer__pages {
     margin: 13px 0;
-    a{
+    a {
       display: block;
+      margin: 0;
     }
   }
 
-
-
-
-  
   .footer__widget__social {
     text-align: center;
   }
@@ -384,7 +377,6 @@
     margin-bottom: 25px;
   }
 
- 
   .filter__item {
     text-align: center;
   }
@@ -643,6 +635,15 @@
 
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+  .cities-tabs {
+    ul {
+      li {
+        a {
+          font-size: 12.3px;
+        }
+      }
+    }
+  }
   .hero__search__form form .hero__search__categories {
     display: none;
   }

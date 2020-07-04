@@ -66,7 +66,7 @@
             <div class="col-lg-3">
                 <div class="header__logo">
                     <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                        <img src="images/logo.png" alt="logo" width="50px" height="50px"></a>
+                        <img src="images/logo.png" alt="logo" width="100px" height="50px"></a>
                 </div>
             </div>
 

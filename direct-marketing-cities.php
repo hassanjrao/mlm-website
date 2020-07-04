@@ -91,7 +91,7 @@ $url = $result["url"];
 
 
                             <div class="cities-tabs">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <ul class="nav nav-tabs " id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="#info" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">More Info</a>
                                     </li>

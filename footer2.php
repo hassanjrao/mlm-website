@@ -329,7 +329,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
             <div class="col-lg-4 col-md-4 my-auto">
                 <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                    <img src="images/logo.png" alt="logo" width="50px" height="50px"></a>
+                    <img src="images/logo.png" alt="logo" width="100px" height="50px"></a>
             </div>
 
             <div class="col-lg-4 col-md-4 text-center my-auto">

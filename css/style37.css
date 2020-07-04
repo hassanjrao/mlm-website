@@ -1397,7 +1397,8 @@ ol {
   .footer__pages {
     margin: 13px 0; }
     .footer__pages a {
-      display: block; }
+      display: block;
+      margin: 0; }
   .footer__widget__social {
     text-align: center; }
   .footer__widget__social {
@@ -1573,6 +1574,8 @@ ol {
 
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+  .cities-tabs ul li a {
+    font-size: 12.3px; }
   .hero__search__form form .hero__search__categories {
     display: none; }
   .featured__controls ul li {

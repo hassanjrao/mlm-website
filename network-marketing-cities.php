@@ -277,8 +277,7 @@ $url = $result["url"];
                             <p>
                                 Selling by MLM or Network Marketing is possible but only in the proper manner. Take notice of the criteria mentioned above to see the performance. Seek to be always on the run to track the trends.
                             </p>
-                            <p class="mt-4"><?php echo "Email: $email <br> Mob: $phone <br> URL: $url " ?></p>
-
+                           
                         </article>
 
                         <div class="cities-tabs">
