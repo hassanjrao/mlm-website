@@ -48,15 +48,20 @@ $url = $result["url"];
 
     <!-- head start -->
 
+    <!-- Title: Network marketing in "city". Get info on network marketing companies
+         Description: Network marketing companies in "city". Research MLM organzations, network marketing business, definitions & jobs in the USA.
+         Keywords: network marketing, network marketing usa, marketing network, network marketing companies, network marketing quotes, network marketing business,
+ -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content=<?php echo "Network marketing in $city" ?>>
-        <meta name="keywords" content=<?php echo "network marketing," . strtolower($city) ?>>
+        <meta name="description" content="<?php echo "Network marketing in $city. Research MLM organzations, network marketing business, definitions & jobs in the USA." ?>">
+        <meta name="keywords" content="<?php echo "network marketing usa, marketing network, network marketing companies, network marketing quotes, network marketing business" ?>">
 
-        <title><?php echo "Network Marketing in $city" ?></title>
+        <title><?php echo "Network Marketing in $city. Get info on network marketing companies" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -280,7 +285,7 @@ $url = $result["url"];
                             <p>
                                 Selling by MLM or Network Marketing is possible but only in the proper manner. Take notice of the criteria mentioned above to see the performance. Seek to be always on the run to track the trends.
                             </p>
-                           
+
                         </article>
 
                         <div class="cities-tabs">

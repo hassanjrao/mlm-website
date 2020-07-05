@@ -44,15 +44,20 @@ $url = $result["url"];
 
     <!-- head start -->
 
+
+    <!-- Title: Direct marketing in "city". Best direct marketers to work with today
+         Description: Direct marketing in "city" United States. Direct marketing companies and their strategies, See best examples
+         KeyWords : direct marketing, direct marketers, direct market, direct marketing definition, direct marketing association, direct marketing examples, examples of direct marketing, direct marketing company, -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content=<?php echo "Direct marketing in " . $city; ?>>
-        <meta name="keywords" content=<?php echo "direct marketing," . strtolower($city); ?>>
+        <meta name="description" content="<?php echo "Direct marketing in $city United States. Direct marketing companies and their strategies, See best examples"; ?>">
+        <meta name="keywords" content="<?php echo "direct marketing, direct marketers, direct market, direct marketing definition, direct marketing association, direct marketing examples, examples of direct marketing, direct marketing company," ?>">
 
-        <title><?php echo "Direct Marketing in $city" ?></title>
+        <title><?php echo "Direct Marketing in $city. Best direct marketers to work with today" ?></title>
 
         <?php include("head-links.php") ?>
 

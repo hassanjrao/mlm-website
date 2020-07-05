@@ -48,16 +48,21 @@ $url = $result["url"];
 
     <!-- head start -->
 
+    <!-- Title: MLM companies in "city". Best companies to join today
+         Description: MLM companies in "city" Unites States. Find the top 100 MLM and fastest growing MLM companies.
+         KeyWords : mlm companies, mlm companies united states, mlm company, company mlm, mlm companies list, top 100 network marketing companies, mlm usa
+ -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-        <meta name="description" content=<?php echo "MLM companies in $city" ?>>
-        <meta name="keywords" content=<?php echo "MLM companies," . strtolower($city); ?>>
+        <meta name="description" content="<?php echo "MLM companies in $city United States. Find the top 100 MLM and fastest growing MLM companies." ?>">
+        <meta name="keywords" content="<?php echo "mlm companies, mlm companies united states, mlm company, company mlm, mlm companies list, top 100 network marketing companies, mlm usa" ?>">
 
-        <title><?php echo "MLM Companies in $city" ?></title>
+        <title><?php echo "MLM Companies in $city. Best companies to join today" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -114,15 +119,7 @@ $url = $result["url"];
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
-                                        <div id="403953953">
-                                            <script type="text/javascript">
-                                                try {
-                                                    window._mNHandle.queue.push(function() {
-                                                        window._mNDetails.loadTag("403953953", "728x90", "403953953");
-                                                    });
-                                                } catch (error) {}
-                                            </script>
-                                        </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email"><?php echo $email; ?></div>
                                     <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone"><?php echo $phone; ?></div>
@@ -553,6 +550,16 @@ $url = $result["url"];
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/main5.js"></script>
 
+
+    <div id="403953953">
+        <script type="text/javascript">
+            try {
+                window._mNHandle.queue.push(function() {
+                    window._mNDetails.loadTag("403953953", "728x90", "403953953");
+                });
+            } catch (error) {}
+        </script>
+    </div>
 
 
 

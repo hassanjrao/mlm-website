@@ -50,20 +50,17 @@ $url = $result["url"];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
-        <meta name="description" content=<?php echo "MLM in " . $city ?>>
-        <meta name="keywords" content=<?php echo "MLM," . strtolower($city) ?>>
+        <!-- Title: MLM in "city". Get info on MLM business and companies
+Description: MLM business in "city". Research MLM companies and inquire about MLM organzations and specific marketing info in the USA.
+Keywords: mlm, mlm stock, mlm business usa, mlm company, mlm software, mlm company in united states, mlm company usa -->
 
-        <title><?php echo "MLM in $city" ?></title>
+        <meta name="description" content="<?php echo "MLM business in $city. Research MLM companies and inquire about MLM organzations and specific marketing info in the USA." ?>">
+        <meta name="keywords" content="<?php echo "mlm, mlm stock, mlm business usa, mlm company, mlm software, mlm company in united states, mlm company usa" ?>">
+
+        <title><?php echo "MLM in $city. Get info on MLM business and companies" ?></title>
 
         <?php include("head-links.php") ?>
 
-        <script type="text/javascript">
-            var infolinks_pid = 3271549;
-            var infolinks_wsid = 0;
-        </script>
-        <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 
 
 
@@ -451,6 +448,12 @@ $url = $result["url"];
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/main5.js"></script>
 
+
+    <script type="text/javascript">
+        var infolinks_pid = 3271549;
+        var infolinks_wsid = 0;
+    </script>
+    <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 
 
 

@@ -45,15 +45,20 @@ $url = $result["url"];
 
     <!-- head start -->
 
+    <!-- Title: Multi level marketers in "city". Find out MLM organization contacts
+         Description: Multi level marketers in "city" United States. The best MLM companies and fastest growing marketer business teams.
+         KeyWords : multi level marketers, best mlm companies to join, mlm organization, top 100 network marketing companies, mlm examples,
+ -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content=<?php echo "Multi level marketers in $city" ?>>
-        <meta name="keywords" content=<?php echo "multi level marketers," . strtolower($city) ?>>
+        <meta name="description" content="<?php echo "Multi level marketers in $city United States. The best MLM companies and fastest growing marketer business teams." ?>">
+        <meta name="keywords" content="<?php echo "multi level marketers, best mlm companies to join, mlm organization, top 100 network marketing companies, mlm examples" ?>">
 
-        <title><?php echo "Multi Level Marketers in $city" ?></title>
+        <title><?php echo "Multi Level Marketers in $city. Find out MLM organization contacts" ?></title>
 
         <?php include("head-links.php") ?>
 

@@ -45,15 +45,19 @@ $url = $result["url"];
 
     <!-- head start -->
 
+    <!-- Title: Direct selling companies in "city". Direct sales works. Know more
+         Description: Direct selling companies in "city" United States. Find a direct selling company near you or the top 100 direct selling companies.
+         KeyWords : direct selling companies, direct selling company, direct sale company, direct sales company, direct sales, top 100 direct selling companies 2020 -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content=<?php echo "Direct selling companies in " . $city ?>>
-        <meta name="keywords" content=<?php echo "Direct selling companies," . strtolower($city); ?>>
+        <meta name="description" content="<?php echo "Direct selling companies in $city United States. Find a direct selling company near you or the top 100 direct selling companies." ?>">
+        <meta name="keywords" content="<?php echo "direct selling companies, direct selling company, direct sale company, direct sales company, direct sales, top 100 direct selling companies 2020" ?>">
 
-        <title><?php echo "Direct Selling Companies in $city" ?></title>
+        <title><?php echo "Direct Selling Companies in $city. Direct sales works. Know more" ?></title>
 
         <?php include("head-links.php") ?>
 
@@ -244,216 +248,216 @@ $url = $result["url"];
 
 
 
-                    </div1>
+                        </div1>
 
-                    <div class="col-lg-12 mb-5">
+                        <div class="col-lg-12 mb-5">
 
-                        <div class="services-links">
+                            <div class="services-links">
 
-                            <h3 class="text-center mb-4">Direct Selling Companies in</h3>
+                                <h3 class="text-center mb-4">Direct Selling Companies in</h3>
 
-                            <?php
-                            $ind = 0;
-                            $cts = array();
-                            $ids = array();
-                            $z = 0;
-                            $done_cities = array();
-                            $done_ids = array();
+                                <?php
+                                $ind = 0;
+                                $cts = array();
+                                $ids = array();
+                                $z = 0;
+                                $done_cities = array();
+                                $done_ids = array();
 
-                            $query = $conn->prepare("SELECT * FROM cities_tb");
-                            $query->execute();
+                                $query = $conn->prepare("SELECT * FROM cities_tb");
+                                $query->execute();
 
-                            while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
-                                $cities[$ind] = $result["city"];
-                                $ids[$ind] = $result["id"];
-                                $ind++;
-                            }
+                                while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                                    $cities[$ind] = $result["city"];
+                                    $ids[$ind] = $result["id"];
+                                    $ind++;
+                                }
 
-                            $totalCities = count($cities);
+                                $totalCities = count($cities);
 
-                            $n = range(0, $totalCities - 1);
-                            shuffle($n);
-
-
-                            ?>
-
-                            <div class="row">
-
-                                <div class="col-lg-3 col-md-3 col-sm-6">
-
-                                    <ul>
-                                        <?php
-
-                                        for ($x = 0; $x < 5; $x++) {
-                                            $i = $n[$x];
-
-                                            $city = $cities[$i];
-                                            $id = $ids[$i];
+                                $n = range(0, $totalCities - 1);
+                                shuffle($n);
 
 
-                                            $done_cities[$z] = $city;
-                                            $done_ids[$z] = $id;
-                                            $z++;
+                                ?>
+
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+
+                                        <ul>
+                                            <?php
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $cities[$i];
+                                                $id = $ids[$i];
 
 
-                                            $ct = preg_replace('/\s+/', '-', $city);
-                                            $_SESSION[$ct] = $id;
-                                        ?>
-                                            <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
-
-                                        <?php
-                                        }
+                                                $done_cities[$z] = $city;
+                                                $done_ids[$z] = $id;
+                                                $z++;
 
 
-                                        ?>
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+                                            <?php
+                                            }
 
 
-                                    </ul>
+                                            ?>
 
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION[$ct] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
+
+
+                                            <?php }
+
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+
+                                            ?>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-6">
+                                        <ul>
+
+                                            <?php
+
+                                            $left = array_diff($cities, $done_cities);
+
+                                            $leftCities = array_values($left);
+
+                                            $l_ids = array_diff($ids, $done_ids);
+                                            $leftIds = array_values($l_ids);
+
+
+                                            $totalLeftCities = count($leftCities);
+
+                                            $n = range(0, $totalLeftCities - 1);
+                                            shuffle($n);
+
+                                            for ($x = 0; $x < 5; $x++) {
+                                                $i = $n[$x];
+
+                                                $city = $leftCities[$i];
+                                                $done_cities[$z] = $city;
+
+
+                                                $id = $leftIds[$i];
+                                                $done_ids[$z] = $id;
+
+                                                $z++;
+
+
+                                                $ct = preg_replace('/\s+/', '-', $city);
+                                                $_SESSION["$ct"] = $id;
+                                            ?>
+                                                <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
+
+                                            <?php }
+
+                                            ?>
+
+                                        </ul>
+
+
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-3 col-md-3 col-sm-6">
-
-                                    <ul>
-
-                                        <?php
-
-                                        $left = array_diff($cities, $done_cities);
-                                        $leftCities = array_values($left);
-
-                                        $l_ids = array_diff($ids, $done_ids);
-                                        $leftIds = array_values($l_ids);
-
-
-                                        $totalLeftCities = count($leftCities);
-
-                                        $n = range(0, $totalLeftCities - 1);
-                                        shuffle($n);
-
-                                        for ($x = 0; $x < 5; $x++) {
-                                            $i = $n[$x];
-
-                                            $city = $leftCities[$i];
-                                            $done_cities[$z] = $city;
-
-                                            $id = $leftIds[$i];
-                                            $done_ids[$z] = $id;
-
-                                            $z++;
-
-                                            $ct = preg_replace('/\s+/', '-', $city);
-                                            $_SESSION[$ct] = $id;
-                                        ?>
-                                            <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a></li>
-
-
-                                        <?php }
-
-                                        ?>
-
-                                    </ul>
-
-
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-6">
-
-                                    <ul>
-
-                                        <?php
-
-                                        $left = array_diff($cities, $done_cities);
-
-                                        $leftCities = array_values($left);
-
-                                        $l_ids = array_diff($ids, $done_ids);
-                                        $leftIds = array_values($l_ids);
-
-
-                                        $totalLeftCities = count($leftCities);
-
-                                        $n = range(0, $totalLeftCities - 1);
-                                        shuffle($n);
-
-                                        for ($x = 0; $x < 5; $x++) {
-                                            $i = $n[$x];
-
-                                            $city = $leftCities[$i];
-                                            $done_cities[$z] = $city;
-
-
-                                            $id = $leftIds[$i];
-                                            $done_ids[$z] = $id;
-
-                                            $z++;
-
-
-                                            $ct = preg_replace('/\s+/', '-', $city);
-                                            $_SESSION["$ct"] = $id;
-                                        ?>
-                                            <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
-
-                                        <?php }
-
-                                        ?>
-
-                                    </ul>
-
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-6">
-                                    <ul>
-
-                                        <?php
-
-                                        $left = array_diff($cities, $done_cities);
-
-                                        $leftCities = array_values($left);
-
-                                        $l_ids = array_diff($ids, $done_ids);
-                                        $leftIds = array_values($l_ids);
-
-
-                                        $totalLeftCities = count($leftCities);
-
-                                        $n = range(0, $totalLeftCities - 1);
-                                        shuffle($n);
-
-                                        for ($x = 0; $x < 5; $x++) {
-                                            $i = $n[$x];
-
-                                            $city = $leftCities[$i];
-                                            $done_cities[$z] = $city;
-
-
-                                            $id = $leftIds[$i];
-                                            $done_ids[$z] = $id;
-
-                                            $z++;
-
-
-                                            $ct = preg_replace('/\s+/', '-', $city);
-                                            $_SESSION["$ct"] = $id;
-                                        ?>
-                                            <li><a href=<?php echo "direct-selling-companies-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a></li>
-
-                                        <?php }
-
-                                        ?>
-
-                                    </ul>
-
-
-                                </div>
                             </div>
 
                         </div>
 
                     </div>
-
                 </div>
             </div>
-        </div>
     </main>
 
     <!-- Footer Section Begin -->

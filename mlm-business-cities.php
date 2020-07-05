@@ -49,15 +49,20 @@ $url = $result["url"];
 
     <!-- head start -->
 
+    <!-- Title: MLM business in "city". Amway vs other MLM companies
+         Description: MLM business in "city" United States. Which are the top 100 MLM and fastest growing MLM companies & business models in 2020-2021?
+         mlm business, mlm business usa, amway mlm, mlm organization, top 100 network marketing companies, mlm wlw, mlm business model, mlm examples
+ -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content=<?php echo "MLM business in $city "; ?>>
-        <meta name="keywords" content=<?php echo "MLM business, " . strtolower($city); ?>>
+        <meta name="description" content="<?php echo "MLM business in $city United States. Which are the top 100 MLM and fastest growing MLM companies & business models in 2020-2021? " ?>">
+        <meta name="keywords" content="<?php echo "mlm business, mlm business usa, amway mlm, mlm organization, top 100 network marketing companies, mlm wlw, mlm business model, mlm examples" ?>">
 
-        <title><?php echo "MLM Business in $city" ?></title>
+        <title><?php echo "MLM Business in $city. Amway vs other MLM companies" ?></title>
 
         <?php include("head-links.php") ?>
 
