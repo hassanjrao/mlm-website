@@ -49,7 +49,7 @@ $url = $result["url"];
 
     <!-- head start -->
 
-    
+
 
     <head>
         <meta charset="UTF-8">
@@ -61,8 +61,15 @@ $url = $result["url"];
         <meta name="keywords" content="<?php echo "mlm business, mlm business usa, amway mlm, mlm organization, top 100 network marketing companies, mlm wlw, mlm business model, mlm examples" ?>">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <?php include("head-links.php") ?>
+
+        <script type="text/javascript">
+            window._mNHandle = window._mNHandle || {};
+            window._mNHandle.queue = window._mNHandle.queue || [];
+            medianet_versionId = "3121199";
+        </script>
+        <script src="https://contextual.media.net/dmedianet.js?cid=8CUP1B0G1" async="async"></script>
 
     </head>
     <!-- head end -->
@@ -185,7 +192,7 @@ $url = $result["url"];
 
                         </article>
 
-                    
+
                         <div class="cities-tabs">
                             <ul class="nav nav-tabs" id="myTab1" role="tablist">
                                 <li class="nav-item">
@@ -208,7 +215,7 @@ $url = $result["url"];
                                 <div class="tab-pane fade" id="web1" role="tabpanel" aria-labelledby="web1"><?php echo $url; ?></div>
                             </div>
                         </div>
-                        
+
 
                         <h2 class="pb-3 text-center">Find us in: </h2>
 
@@ -485,7 +492,34 @@ $url = $result["url"];
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main5.js"></script>
+    <script src="js/main6.js"></script>
+
+
+    <!-- ---------------------------- -->
+
+    <script type="text/javascript" src="//ptewarin.net/afu.php?zoneid=3417692"></script>
+
+    <!-- ---------------------------------------------------------- -->
+    <script type="text/javascript">
+        var infolinks_pid = 3271549;
+        var infolinks_wsid = 0;
+    </script>
+    <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+
+    <!-- ----------------------------------------------- -->
+
+
+    <div id="403953953">
+        <script type="text/javascript">
+            try {
+                window._mNHandle.queue.push(function() {
+                    window._mNDetails.loadTag("403953953", "728x90", "403953953");
+                });
+            } catch (error) {}
+        </script>
+    </div>
+
+
 
 
 </body>

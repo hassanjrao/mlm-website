@@ -65,7 +65,7 @@
 
                 </div>
 
-               
+
 
                 <!-- The Modal -->
                 <div class="modal" id="myModal">
@@ -80,7 +80,7 @@
 
                             <!-- Modal body -->
                             <div class="modal-body">
-                                <form action="" method="POST">
+                                <form action="contact" method="POST">
                                     <input type="text" class="form-control" placeholder="Name" name="name" required=""><br>
                                     <input type="email" class="form-control" placeholder="Email" name="email" required=""><br>
                                     <input type="number" class="form-control" placeholder="Mobile" name="mobile" required=""><br>
@@ -89,10 +89,10 @@
                                     <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
 
                                     <br>
-                                    <div class="g-recaptcha" data-sitekey="6Ldl5qkZAAAAAEG_OJFTYpKHKEYkxpYsKOhSYqIS"></div>
+                                    <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>
                                     <br>
                                     <div class="modal-footer">
-                                        <button type="submit" style="background: #7fad39; color:white;" class="btn">Submit</button>
+                                        <button type="submit" disabled="disabled" id="enquiry-submit" name="submit" style="background: #7fad39; color:white;" class="btn">Submit</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                                     </div>
@@ -121,3 +121,14 @@
 
 
 <!-- Hero Section End -->
+
+<script type="text/javascript">
+    function enable_submit_btn() {
+        document.getElementById("enquiry-submit").disabled = false;
+    };
+    function disable_submit_btn() {
+
+        document.getElementById("enquiry-submit").disabled = true;
+
+    };
+</script>

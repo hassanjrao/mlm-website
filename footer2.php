@@ -299,7 +299,7 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
-                        <form action="" method="POST" id="captcha-form">
+                        <form action="contact.php" method="POST" id="captcha-form">
                             <input type="text" class="form-control" placeholder="Name" name="name" required="">
                             <input type="email" class="form-control" placeholder="Email" name="email" required="">
                             <input type="number" class="form-control" placeholder="Mobile" name="mobile" required="">
@@ -309,10 +309,11 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 
 
-                            <div class="g-recaptcha" data-sitekey="6Ldl5qkZAAAAAEG_OJFTYpKHKEYkxpYsKOhSYqIS"></div>
-
+                            <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>
+                                    
                             <br>
-                            <button type="submit" class="btn mt-1">Submit</button>
+
+                            <button type="submit" disabled="disabled" id="enquiry-submit-f2" name="submit" class="btn mt-1">Submit</button>
 
                         </form>
                     </div>
@@ -358,8 +359,13 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
 <!-- Footer Section End -->
 
-<script>
-    function onSubmit(token) {
-        document.getElementById("captcha-form").submit();
-    }
+<script type="text/javascript">
+    function enable_submit_btn() {
+        document.getElementById("enquiry-submit-f2").disabled = false;
+    };
+    function disable_submit_btn() {
+
+        document.getElementById("enquiry-submit-f2").disabled = true;
+
+    };
 </script>

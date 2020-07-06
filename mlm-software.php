@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="MLM Software">
+        <meta name="description" content="text/html">
         <meta name="keywords" content="MLM Software">
 
         <title>MLM Software</title>
@@ -382,7 +382,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main5.js"></script>
+    <script src="js/main6.js"></script>
 
 
 </body>
