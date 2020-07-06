@@ -48,22 +48,19 @@ $url = $result["url"];
 
     <!-- head start -->
 
-    <!-- Title: MLM companies in "city". Best companies to join today
-         Description: MLM companies in "city" Unites States. Find the top 100 MLM and fastest growing MLM companies.
-         KeyWords : mlm companies, mlm companies united states, mlm company, company mlm, mlm companies list, top 100 network marketing companies, mlm usa
- -->
-
+   
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
+        <title><?php echo "MLM Companies in $city. Best companies to join today" ?></title>
 
         <meta name="description" content="<?php echo "MLM companies in $city United States. Find the top 100 MLM and fastest growing MLM companies." ?>">
         <meta name="keywords" content="<?php echo "mlm companies, mlm companies united states, mlm company, company mlm, mlm companies list, top 100 network marketing companies, mlm usa" ?>">
 
-        <title><?php echo "MLM Companies in $city. Best companies to join today" ?></title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
         <?php include("head-links.php") ?>
 
         <script type="text/javascript">

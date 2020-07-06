@@ -8,15 +8,16 @@
 <body>
     <!-- head start -->
 
+
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="disclaimer">
-        <meta name="keywords" content="disclaimer">
+        <title>MLM Disclaimer. DSA.in</title>
 
-        <title>Disclaimer</title>
+        <meta name="description" content="MLM Disclaimer. DSA.in guide on MLM companies & Network marketing organizations across the world.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
         <?php include("head-links.php") ?>
 
@@ -45,7 +46,7 @@
         <div class="row">
             <div class="col-lg-12">
 
-            <h3>Disclaimer</h3><br>
+                <h3>Disclaimer</h3><br>
                 <article>
                     <p>
                         DSA Web Site Agreement

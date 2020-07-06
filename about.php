@@ -8,18 +8,16 @@
 <body>
     <!-- head start -->
 
+   
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
-        <meta name="description" content="text/html">
-        <meta name="keywords" content=<?php echo "mlm" ?>>
+        <title>MLM About us. DSA.in</title>
 
-        <title></title>
-
+        <meta name="description" content="MLM About us. DSA.in guide on MLM companies & Network marketing organizations across the world.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <?php include("head-links.php") ?>
 
     </head>

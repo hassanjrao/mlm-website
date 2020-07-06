@@ -47,18 +47,17 @@ $url = $result["url"];
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Title: MLM in "city". Get info on MLM business and companies
-Description: MLM business in "city". Research MLM companies and inquire about MLM organzations and specific marketing info in the USA.
-Keywords: mlm, mlm stock, mlm business usa, mlm company, mlm software, mlm company in united states, mlm company usa -->
-
-        <meta name="description" content="<?php echo "MLM business in $city. Research MLM companies and inquire about MLM organzations and specific marketing info in the USA." ?>">
-        <meta name="keywords" content="<?php echo "mlm, mlm stock, mlm business usa, mlm company, mlm software, mlm company in united states, mlm company usa" ?>">
-
+      
         <title><?php echo "MLM in $city. Get info on MLM business and companies" ?></title>
 
+        <meta name="description" content="<?php echo "MLM business in $city. Research MLM companies and inquire about MLM organizations and specific marketing info in the USA." ?>">
+        <meta name="keywords" content="<?php echo "mlm, mlm stock, mlm business usa, mlm company, mlm software, mlm company in united states, mlm company usa" ?>">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+      
         <?php include("head-links.php") ?>
 
 

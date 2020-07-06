@@ -1,5 +1,16 @@
 <?php include("database/db.php");
 session_start();
+
+$id = $_GET["id"];
+$query = $conn->prepare("SELECT * FROM blog_tb where id='$id'");
+$query->execute();
+
+$result = $query->fetch(PDO::FETCH_ASSOC);
+
+$title = $result["title"];
+$body = $result["body"];
+$image = $result["image"];
+
 ?>
 
 <!DOCTYPE html>
@@ -10,15 +21,20 @@ session_start();
 
     <!-- head start -->
 
+   
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
 
-        <title>Blog</title>
+        <title><?php echo "MLM blog - $title" ?></title>
+        <meta name="description" content="<?php echo "Network marketing blog - $title" ?>">
+        <meta name="keywords" content="mlm blog, network marketing blog, mlm companies, mlm company, multi level marketing, multi level marketers">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 
         <?php include("head-links.php"); ?>
 
@@ -52,21 +68,7 @@ session_start();
 
                 <div class="col-lg-12 col-md-12 order-md-1 order-1">
 
-                    <?php
 
-
-                    $id = $_GET["id"];
-                    $query = $conn->prepare("SELECT * FROM blog_tb where id='$id'");
-                    $query->execute();
-
-                    $result = $query->fetch(PDO::FETCH_ASSOC);
-
-                    $title = $result["title"];
-                    $body = $result["body"];
-                    $image = $result["image"];
-
-
-                    ?>
 
                     <div class="blog__details__text">
 

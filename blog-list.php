@@ -10,15 +10,17 @@ session_start();
 
     <!-- head start -->
 
+  
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
+        <title>MLM blog in USA, Europe, India, Asia, South America. DSA.in</title>
 
-        <title>Blogs</title>
+        <meta name="description" content="Network marketing blog on multi level marketing & related business.">
+        <meta name="keywords" content="mlm blog, network marketing blog, mlm companies, mlm company, multi level marketing, multi level marketers">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <?php include("head-links.php"); ?>
 
@@ -91,7 +93,7 @@ session_start();
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="blog__item">
                                     <div class="blog__item__pic">
-                                        <img src="images/blog/<?php echo $result['image'];  ?>" alt="Blog Image">
+                                        <a href="blog-details.php?<?php echo "blog=" . $title . "&id=" . $id  ?>"><img src="images/blog/<?php echo $result['image'];  ?>" alt="Blog Image"></a>
                                     </div>
                                     <div class="blog__item__text">
                                         <h5><a href="#"><?php echo $result["title"]; ?></a></h5>

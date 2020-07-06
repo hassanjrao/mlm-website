@@ -12,13 +12,14 @@ session_start();
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="home">
-        <meta name="keywords" content="mlm">
+        <title>MLM business in USA, Europe, India, Asia, South America. DSA.in</title>
 
-        <title>Home</title>
+        <meta name="description" content="DSA.in guide on MLM companies & Network marketing organizations across the world.">
+        <meta name="keywords" content="mlm, network marketing, mlm companies, mlm company, multi level marketing, multi level marketers">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 
         <?php include("head-links.php"); ?>
 

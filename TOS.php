@@ -8,15 +8,15 @@
 <body>
     <!-- head start -->
 
+  
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <meta name="description" content="TOS">
-        <meta name="keywords" content="tos">
-
         <title>TOS</title>
+        <meta name="description" content="MLM TOS. DSA.in guide on MLM companies & Network marketing organizations across the world.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <?php include("head-links.php") ?>
 
