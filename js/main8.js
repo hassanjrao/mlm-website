@@ -165,6 +165,55 @@
     });
 
 
+    $("#enquiry-submit").click(function () {
+
+        if ($("#l-name").val() == "" || $("#l-email").val() == "" || $("#l-mob").val() == "" || $("#l-city").val() == "" || $("#l-sub").val() == "" || $("#l-comm").val() == "") {
+            $("#success").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'> Please fill the <strong>form!</strong></div>")
+            return false;
+        }
+
+        else {
+
+            event.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "contact.php",
+                data: $("#enquiry-form").serialize(),
+                success: function (response) {
+                    console.log(response);
+                    $("#success").html(response);
+                }
+            })
+        }
+    });
+
+    $("#enquiry-submit-f").click(function () {
+
+       
+        if ($("#f-name").val() == "" || $("#f-email").val() == "" || $("#f-mob").val() == "" || $("#f-city").val() == "" || $("#f-sub").val() == "" || $("#f-comm").val() == "") {
+            $("#success-f").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'> Please fill the <strong>form!</strong></div>")
+            return false;
+        }
+        else {
+
+            event.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "contact.php",
+                data: $("#captcha-form").serialize(),
+                success: function (response) {
+                    console.log(response);
+                    $("#success-f").html(response);
+                }
+            })
+        }
+
+    });
+
+
+
 
 
 

@@ -290,17 +290,19 @@ $result1 = $query1->fetch(PDO::FETCH_ASSOC);
 
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
-                        <form action="contact.php" method="POST" id="captcha-form" >
-                            <input type="text" class="form-control" placeholder="Name" name="name" required="">
-                            <input type="email" class="form-control" placeholder="Email" name="email" required="">
-                            <input type="number" class="form-control" placeholder="Mobile" name="mobile" required="">
-                            <input type="text" class="form-control" placeholder="City" name="city" required="">
-                            <input type="text" class="form-control" placeholder="Subject" name="subject" required="">
-                            <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
+                        <form id="captcha-form" >
+                            <input type="text" id="f-name" class="form-control" placeholder="Name" name="name" required="">
+                            <input type="email" id="f-email"  class="form-control" placeholder="Email" name="email" required="">
+                            <input type="number" id="f-mob" class="form-control" placeholder="Mobile" name="mobile" required="">
+                            <input type="text" id="f-city" class="form-control" placeholder="City" name="city" required="">
+                            <input type="text" id="f-sub" class="form-control" placeholder="Subject" name="subject" required="">
+                            <textarea class="form-control" id="f-comm" placeholder="Comment" name="comment" required=""></textarea>
   
                             <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>                      
                             <br>
-                            <button type="submit" disabled="disabled" id="enquiry-submit-f" name="submit" class="btn mt-1">Submit</button>
+
+                            <div id="success-f"> </div>
+                            <button type="button" disabled="disabled" id="enquiry-submit-f" name="submit" class="btn mt-1">Submit</button>
 
                         </form>
                     </div>

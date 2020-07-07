@@ -358,7 +358,7 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main6.js"></script>
+    <script src="js/main8.js"></script>
 
 
 </body>

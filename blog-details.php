@@ -72,7 +72,7 @@ $image = $result["image"];
 
                     <div class="blog__details__text">
 
-                        <img src="images/blog/<?php echo $image; ?>" alt="Blog Image">
+                        <img src="images/blog/<?php echo $image; ?>" alt="Blog Image" >
                         <h2><?php echo $title; ?></h2>
 
                         <?php echo $body ?>
@@ -111,7 +111,7 @@ $image = $result["image"];
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main6.js"></script>
+    <script src="js/main8.js"></script>
 
 
 

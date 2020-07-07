@@ -80,23 +80,23 @@
 
                             <!-- Modal body -->
                             <div class="modal-body">
-                                <form action="contact" method="POST">
-                                    <input type="text" class="form-control" placeholder="Name" name="name" required=""><br>
-                                    <input type="email" class="form-control" placeholder="Email" name="email" required=""><br>
-                                    <input type="number" class="form-control" placeholder="Mobile" name="mobile" required=""><br>
-                                    <input type="text" class="form-control" placeholder="City" name="city" required=""><br>
-                                    <input type="text" class="form-control" placeholder="Subject" name="subject" required=""><br>
-                                    <textarea class="form-control" placeholder="Comment" name="comment" required=""></textarea>
+                                <form id="enquiry-form">
+                                    <input type="text" id="l-name" class="form-control" placeholder="Name" name="name" required=""><br>
+                                    <input type="email" id="l-email" class="form-control" placeholder="Email" name="email" required=""><br>
+                                    <input type="number" id="l-mob" class="form-control" placeholder="Mobile" name="mobile" required=""><br>
+                                    <input type="text" id="l-city" class="form-control" placeholder="City" name="city" required=""><br>
+                                    <input type="text" id="l-sub" class="form-control" placeholder="Subject" name="subject" required=""><br>
+                                    <textarea id="l-comm" class="form-control" placeholder="Comment" name="comment" required=""></textarea>
 
                                     <br>
-                                    <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>
+                                    <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn_l" data-expired-callback="disable_submit_btn_l"></div>
                                     <br>
+                                    <div id="success"> </div>
                                     <div class="modal-footer">
-                                        <button type="submit" disabled="disabled" id="enquiry-submit" name="submit" style="background: #7fad39; color:white;" class="btn">Submit</button>
+                                        <button type="button" disabled="disabled" id="enquiry-submit" name="submit" style="background: #7fad39; color:white;" class="btn">Submit</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 
                                     </div>
-
 
                                 </form>
                             </div>
@@ -123,10 +123,10 @@
 <!-- Hero Section End -->
 
 <script type="text/javascript">
-    function enable_submit_btn() {
+    function enable_submit_btn_l() {
         document.getElementById("enquiry-submit").disabled = false;
     };
-    function disable_submit_btn() {
+    function disable_submit_btn_l() {
 
         document.getElementById("enquiry-submit").disabled = true;
 
